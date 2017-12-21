@@ -1,6 +1,25 @@
 
 
+h1 {
+  color: black;
+}
 
+a {
+  text-decoration: none;
+}
+
+a > h1:hover {
+  color: blue;
+}
+
+time {
+  float: right;
+}
+
+.wrapper {
+  width: 75%;
+  margin: 0 auto;
+}
 
 #bs-example-navbar-collapse-1 {
   background-color: black;
@@ -14,4 +33,39 @@
 
 .about-nav li {
   padding: 0.25em 1em;
+}
+
+.article {
+  width: 80%;
+  height: 30vh;
+  margin: 0 auto;
+}
+
+.tags {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tag {
+  background-color: lightgrey;
+  color: black;
+  padding: 0.5em 0.5em;
+}
+
+@media screen and (max-width: 767px) {
+  .wrapper {
+    width: 95%;
+  }
+  .article {
+    width: 100%;
+    height: auto;
+  }
+  time {
+    float: none;
+  }
+  .tags {
+    display: block;
+  }
 }
