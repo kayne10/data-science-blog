@@ -12,8 +12,9 @@ a > h1:hover {
   color: blue;
 }
 
-time {
-  float: right;
+img {
+  border-radius: 10%;
+  box-shadow: 0 0 20px;
 }
 
 .wrapper {
@@ -54,6 +55,17 @@ time {
   padding: 0.5em 0.5em;
 }
 
+#footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
+
 @media screen and (max-width: 767px) {
   .wrapper {
     width: 95%;
@@ -61,9 +73,6 @@ time {
   .article {
     width: 100%;
     height: auto;
-  }
-  time {
-    float: none;
   }
   .tags {
     display: block;
