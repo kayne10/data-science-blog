@@ -1,0 +1,17 @@
+
+
+
+
+#bs-example-navbar-collapse-1 {
+  background-color: black;
+}
+
+
+.about-nav {
+  list-style: none;
+  display: flex;
+}
+
+.about-nav li {
+  padding: 0.25em 1em;
+}
