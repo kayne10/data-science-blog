@@ -3,12 +3,13 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Spotify - Behind The Scenes</title>
+<title>Discovering of Cryptocurrencies</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
 <style type="text/css">
     /*!
 *
@@ -11749,7 +11750,6 @@ div#notebook {
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link rel="stylesheet" href="../assets/css/style.css">
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
@@ -11793,7 +11793,7 @@ div#notebook {
               <li><a class="links" href="#">Personal Site</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a class="links" href="archive.html">Archive</a></li>
+              <li><a class="links" href="index.html">Archive</a></li>
               <li><a class="links" href="about.html">About</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -11806,7 +11806,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="My-Top-Played-Artists-on-Spotify">My Top Played Artists on Spotify<a class="anchor-link" href="#My-Top-Played-Artists-on-Spotify">&#182;</a></h1>
+<h1 id="Discovering-of-Cryptocurrencies---Troy-Kayne---December-15,-2017">Discovering of Cryptocurrencies - Troy Kayne - December 15, 2017<a class="anchor-link" href="#Discovering-of-Cryptocurrencies---Troy-Kayne---December-15,-2017">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -11814,7 +11814,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>December 10, 2017</p>
+<p>In this Article, I will show you the power of pandas and the data analytics of historical prices of multiple cryptocurrencies. Unfortunately, the data does not represent the recent exponential rise of these stock prices. The purpose of this exersice is to see if more recent cryptocurrencies will rise similar to Bitcoin</p>
 
 </div>
 </div>
@@ -11823,7 +11823,15 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>ANTH 4020: Digital Anthropology</p>
+<h4 id="Cryptocurrencies-used-in-this-study">Cryptocurrencies used in this study<a class="anchor-link" href="#Cryptocurrencies-used-in-this-study">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Bitccoin, Ethereum, Litecoin, and Monero</p>
 
 </div>
 </div>
@@ -11832,20 +11840,30 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Final Mixed-media Project</p>
+<p>Source: <a href="https://www.kaggle.com/sudalairajkumar/cryptocurrencypricehistory">https://www.kaggle.com/sudalairajkumar/cryptocurrencypricehistory</a></p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="This-Notebook-will-Read,-Concatenate,-and-Map-Reduce-multiple-DataFrames">This Notebook will Read, Concatenate, and Map Reduce multiple DataFrames<a class="anchor-link" href="#This-Notebook-will-Read,-Concatenate,-and-Map-Reduce-multiple-DataFrames">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">from</span> <span class="nn">pandas.io.json</span> <span class="k">import</span> <span class="n">json_normalize</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">plotly</span>
+<span class="kn">import</span> <span class="nn">plotly.plotly</span> <span class="k">as</span> <span class="nn">py</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="k">as</span> <span class="nn">go</span>
 </pre></div>
 
 </div>
@@ -11853,23 +11871,23 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is an example of loading a data frame from a csv file and indexing it by the Date</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;/Users/troy/Github/courses/DANTH/myTopArtists.json&#39;</span><span class="p">)</span>
-<span class="n">name</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">pop</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">genres</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">]:</span>
-    <span class="n">name</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
-    <span class="n">pop</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s1">&#39;popularity&#39;</span><span class="p">])</span>
-    <span class="n">genres</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s1">&#39;genres&#39;</span><span class="p">])</span>
-
-<span class="n">df_columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Artists&#39;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span><span class="s1">&#39;Popularities&#39;</span><span class="p">:</span> <span class="n">pop</span><span class="p">,</span><span class="s1">&#39;Genres&#39;</span><span class="p">:</span> <span class="n">genres</span><span class="p">}</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df_columns</span><span class="p">)</span>
-<span class="n">df</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">btc_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/troy/Github/courses/crypto-pirates/cryptocurrencypricehistory/bitcoin_price.csv&#39;</span><span class="p">)</span>
+<span class="n">btc_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">btc_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -11882,7 +11900,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[2]:</div>
+<div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -11905,131 +11923,68 @@ div#notebook {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Artists</th>
-      <th>Genres</th>
-      <th>Popularities</th>
+      <th>Open</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Close</th>
+      <th>Volume</th>
+      <th>Market Cap</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>Metallica</td>
-      <td>[alternative metal, alternative rock, hard roc...</td>
-      <td>86</td>
+      <th>28-Apr-13</th>
+      <td>135.30</td>
+      <td>135.98</td>
+      <td>132.10</td>
+      <td>134.21</td>
+      <td>-</td>
+      <td>1,500,520,000</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>Red Hot Chili Peppers</td>
-      <td>[alternative rock, funk metal, funk rock, mode...</td>
-      <td>88</td>
+      <th>29-Apr-13</th>
+      <td>134.44</td>
+      <td>147.49</td>
+      <td>134.00</td>
+      <td>144.54</td>
+      <td>-</td>
+      <td>1,491,160,000</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>Jazzinuf</td>
-      <td>[chillhop]</td>
-      <td>57</td>
+      <th>30-Apr-13</th>
+      <td>144.00</td>
+      <td>146.93</td>
+      <td>134.05</td>
+      <td>139.00</td>
+      <td>-</td>
+      <td>1,597,780,000</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>The Bloody Beetroots</td>
-      <td>[alternative dance, complextro, edm, electro h...</td>
-      <td>58</td>
+      <th>1-May-13</th>
+      <td>139.00</td>
+      <td>139.89</td>
+      <td>107.72</td>
+      <td>116.99</td>
+      <td>-</td>
+      <td>1,542,820,000</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>Neil Young</td>
-      <td>[album rock, classic rock, mellow gold, perman...</td>
-      <td>74</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Grateful Dead</td>
-      <td>[blues-rock, classic rock, folk rock, jam band...</td>
-      <td>72</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Mark Knopfler</td>
-      <td>[blues-rock, mellow gold, roots rock, singer-s...</td>
-      <td>65</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Umphrey's McGee</td>
-      <td>[jam band, modern blues, progressive bluegrass]</td>
-      <td>55</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Random Rab</td>
-      <td>[glitch hop, new tribe, world fusion]</td>
-      <td>50</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Nas</td>
-      <td>[dirty south rap, east coast hip hop, gangster...</td>
-      <td>77</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>Widespread Panic</td>
-      <td>[blues-rock, jam band, modern blues, roots roc...</td>
-      <td>56</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>2Pac</td>
-      <td>[g funk, gangster rap, hip hop, pop rap, rap, ...</td>
-      <td>83</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>Phish</td>
-      <td>[alternative rock, blues-rock, jam band, moder...</td>
-      <td>62</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>Koan Sound</td>
-      <td>[brostep, catstep, chillstep, complextro, edm,...</td>
-      <td>45</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>Kendrick Lamar</td>
-      <td>[hip hop, pop rap, rap, west coast rap]</td>
-      <td>95</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>A Tribe Called Quest</td>
-      <td>[alternative hip hop, east coast hip hop, gang...</td>
-      <td>73</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>Jimi Hendrix</td>
-      <td>[album rock, blues-rock, classic funk rock, cl...</td>
-      <td>77</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>Robert Glasper Experiment</td>
-      <td>[deep indie r&amp;b, indie jazz, indie r&amp;b, neo soul]</td>
-      <td>55</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>Justice</td>
-      <td>[alternative dance, dance-punk, electro house,...</td>
-      <td>67</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>Guns N' Roses</td>
-      <td>[album rock, alternative rock, classic rock, g...</td>
-      <td>83</td>
+      <th>2-May-13</th>
+      <td>116.38</td>
+      <td>125.60</td>
+      <td>92.28</td>
+      <td>105.21</td>
+      <td>-</td>
+      <td>1,292,190,000</td>
     </tr>
   </tbody>
 </table>
@@ -12046,42 +12001,26 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Visualization">Visualization<a class="anchor-link" href="#Visualization">&#182;</a></h1>
+<h1 id="Adding-Columns">Adding Columns<a class="anchor-link" href="#Adding-Columns">&#182;</a></h1>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">plotly</span>
-<span class="kn">import</span> <span class="nn">plotly.plotly</span> <span class="k">as</span> <span class="nn">py</span>
-<span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="k">as</span> <span class="nn">go</span>
-
-<span class="c1"># use plotly API access key</span>
-<span class="n">plotly</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">set_credentials_file</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s1">&#39;tkayne10&#39;</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="s1">&#39;ucP2JLwCw0pvU0MIFPtp&#39;</span><span class="p">)</span>
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here I am adding a new column to the data frame where the value takes in an operation of two columns.</p>
 
 </div>
 </div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
-        <span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Artists&#39;</span><span class="p">],</span> <span class="c1"># assign x as the dataframe column &#39;x&#39;</span>
-        <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Popularities&#39;</span><span class="p">]</span>
-    <span class="p">)</span>
-<span class="p">]</span>
-
-<span class="c1"># IPython notebook</span>
-<span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;pandas-bar-chart&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">btc_df</span><span class="p">[</span><span class="s1">&#39;Daily Range&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">btc_df</span><span class="p">[</span><span class="s1">&#39;High&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">btc_df</span><span class="p">[</span><span class="s1">&#39;Low&#39;</span><span class="p">]</span>
+<span class="n">btc_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -12099,7 +12038,97 @@ div#notebook {
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~tkayne10/46.embed" height="525px" width="100%"></iframe>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Open</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Close</th>
+      <th>Volume</th>
+      <th>Market Cap</th>
+      <th>Daily Range</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>28-Apr-13</th>
+      <td>135.30</td>
+      <td>135.98</td>
+      <td>132.10</td>
+      <td>134.21</td>
+      <td>-</td>
+      <td>1,500,520,000</td>
+      <td>3.88</td>
+    </tr>
+    <tr>
+      <th>29-Apr-13</th>
+      <td>134.44</td>
+      <td>147.49</td>
+      <td>134.00</td>
+      <td>144.54</td>
+      <td>-</td>
+      <td>1,491,160,000</td>
+      <td>13.49</td>
+    </tr>
+    <tr>
+      <th>30-Apr-13</th>
+      <td>144.00</td>
+      <td>146.93</td>
+      <td>134.05</td>
+      <td>139.00</td>
+      <td>-</td>
+      <td>1,597,780,000</td>
+      <td>12.88</td>
+    </tr>
+    <tr>
+      <th>1-May-13</th>
+      <td>139.00</td>
+      <td>139.89</td>
+      <td>107.72</td>
+      <td>116.99</td>
+      <td>-</td>
+      <td>1,542,820,000</td>
+      <td>32.17</td>
+    </tr>
+    <tr>
+      <th>2-May-13</th>
+      <td>116.38</td>
+      <td>125.60</td>
+      <td>92.28</td>
+      <td>105.21</td>
+      <td>-</td>
+      <td>1,292,190,000</td>
+      <td>33.32</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 
 </div>
@@ -12112,7 +12141,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Music-Mainstream-Meter">Music Mainstream Meter<a class="anchor-link" href="#Music-Mainstream-Meter">&#182;</a></h3>
+<p>This is the mean of Daily Range for Bitcoin</p>
+
 </div>
 </div>
 </div>
@@ -12121,8 +12151,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mmm</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Popularities&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="n">mmm</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">btc_df</span><span class="p">[</span><span class="s1">&#39;Daily Range&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -12141,94 +12170,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>68.900000000000006</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Determining-the-number-of-artists-with-genres-containing-'rock'-in-them">Determining the number of artists with genres containing 'rock' in them<a class="anchor-link" href="#Determining-the-number-of-artists-with-genres-containing-'rock'-in-them">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Loop through Genre column and track 'rock'</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">chief_string</span><span class="p">(</span><span class="n">genre</span><span class="p">):</span>
-    <span class="k">if</span> <span class="s1">&#39;rock&#39;</span> <span class="ow">in</span> <span class="n">genre</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Genres&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">chief_string</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[7]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0      True
-1      True
-2     False
-3     False
-4      True
-5      True
-6     False
-7     False
-8     False
-9     False
-10    False
-11    False
-12     True
-13    False
-14    False
-15    False
-16     True
-17    False
-18    False
-19     True
-Name: Genres, dtype: bool</pre>
+<pre>39.37898765432098</pre>
 </div>
 
 </div>
@@ -12242,7 +12184,22 @@ Name: Genres, dtype: bool</pre>
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Genres&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">chief_string</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">1. Add new column. 2. Define Conditions. 3. Change necessary value to the column that meets the condition.</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="n">btc_df</span><span class="p">[</span><span class="s1">&#39;Significant&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+<span class="n">cond1</span> <span class="o">=</span> <span class="n">btc_df</span><span class="p">[</span><span class="s1">&#39;Daily Range&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">btc_df</span><span class="p">[</span><span class="s1">&#39;Daily Range&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">cond2</span> <span class="o">=</span> <span class="n">btc_df</span><span class="p">[</span><span class="s1">&#39;Daily Range&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">btc_df</span><span class="p">[</span><span class="s1">&#39;Daily Range&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">yes</span> <span class="o">=</span> <span class="n">btc_df</span><span class="p">[</span><span class="n">cond1</span><span class="p">]</span>
+<span class="n">no</span> <span class="o">=</span> <span class="n">btc_df</span><span class="p">[</span><span class="n">cond2</span><span class="p">]</span>
+
+<span class="n">column</span> <span class="o">=</span> <span class="s1">&#39;Significant&#39;</span>
+<span class="n">btc_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">cond1</span><span class="p">,</span> <span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Yes&#39;</span>
+<span class="n">btc_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">cond2</span><span class="p">,</span> <span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;No&#39;</span>
+<span class="n">btc_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Significant&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12256,55 +12213,6 @@ Name: Genres, dtype: bool</pre>
 <div class="output_area">
 
 <div class="prompt output_prompt">Out[8]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>7</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Genres&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">chief_string</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-<span class="n">new</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">result</span><span class="p">][[</span><span class="s1">&#39;Artists&#39;</span><span class="p">]]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">new</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">result</span><span class="p">]</span>
-<span class="n">new</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">new</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -12327,64 +12235,639 @@ Name: Genres, dtype: bool</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>index</th>
-      <th>Artists</th>
-      <th>Genres</th>
-      <th>Popularities</th>
+      <th>Open</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Close</th>
+      <th>Volume</th>
+      <th>Market Cap</th>
+      <th>Daily Range</th>
+    </tr>
+    <tr>
+      <th>Significant</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>0</td>
-      <td>Metallica</td>
-      <td>[alternative metal, alternative rock, hard roc...</td>
-      <td>86</td>
+      <th>No</th>
+      <td>135.30</td>
+      <td>135.98</td>
+      <td>132.10</td>
+      <td>134.21</td>
+      <td>-</td>
+      <td>1,500,520,000</td>
+      <td>3.88</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>Red Hot Chili Peppers</td>
-      <td>[alternative rock, funk metal, funk rock, mode...</td>
-      <td>88</td>
+      <th>No</th>
+      <td>134.44</td>
+      <td>147.49</td>
+      <td>134.00</td>
+      <td>144.54</td>
+      <td>-</td>
+      <td>1,491,160,000</td>
+      <td>13.49</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>4</td>
-      <td>Neil Young</td>
-      <td>[album rock, classic rock, mellow gold, perman...</td>
-      <td>74</td>
+      <th>No</th>
+      <td>144.00</td>
+      <td>146.93</td>
+      <td>134.05</td>
+      <td>139.00</td>
+      <td>-</td>
+      <td>1,597,780,000</td>
+      <td>12.88</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>5</td>
-      <td>Grateful Dead</td>
-      <td>[blues-rock, classic rock, folk rock, jam band...</td>
-      <td>72</td>
+      <th>No</th>
+      <td>139.00</td>
+      <td>139.89</td>
+      <td>107.72</td>
+      <td>116.99</td>
+      <td>-</td>
+      <td>1,542,820,000</td>
+      <td>32.17</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>12</td>
-      <td>Phish</td>
-      <td>[alternative rock, blues-rock, jam band, moder...</td>
-      <td>62</td>
+      <th>No</th>
+      <td>116.38</td>
+      <td>125.60</td>
+      <td>92.28</td>
+      <td>105.21</td>
+      <td>-</td>
+      <td>1,292,190,000</td>
+      <td>33.32</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>16</td>
-      <td>Jimi Hendrix</td>
-      <td>[album rock, blues-rock, classic funk rock, cl...</td>
-      <td>77</td>
+      <th>No</th>
+      <td>106.25</td>
+      <td>108.13</td>
+      <td>79.10</td>
+      <td>97.75</td>
+      <td>-</td>
+      <td>1,180,070,000</td>
+      <td>29.03</td>
     </tr>
     <tr>
-      <th>6</th>
-      <td>19</td>
-      <td>Guns N' Roses</td>
-      <td>[album rock, alternative rock, classic rock, g...</td>
-      <td>83</td>
+      <th>No</th>
+      <td>98.10</td>
+      <td>115.00</td>
+      <td>92.50</td>
+      <td>112.50</td>
+      <td>-</td>
+      <td>1,089,890,000</td>
+      <td>22.50</td>
+    </tr>
+    <tr>
+      <th>No</th>
+      <td>112.90</td>
+      <td>118.80</td>
+      <td>107.14</td>
+      <td>115.91</td>
+      <td>-</td>
+      <td>1,254,760,000</td>
+      <td>11.66</td>
+    </tr>
+    <tr>
+      <th>No</th>
+      <td>115.98</td>
+      <td>124.66</td>
+      <td>106.64</td>
+      <td>112.30</td>
+      <td>-</td>
+      <td>1,289,470,000</td>
+      <td>18.02</td>
+    </tr>
+    <tr>
+      <th>No</th>
+      <td>112.25</td>
+      <td>113.44</td>
+      <td>97.70</td>
+      <td>111.50</td>
+      <td>-</td>
+      <td>1,248,470,000</td>
+      <td>15.74</td>
+    </tr>
+    <tr>
+      <th>No</th>
+      <td>109.60</td>
+      <td>115.78</td>
+      <td>109.60</td>
+      <td>113.57</td>
+      <td>-</td>
+      <td>1,219,450,000</td>
+      <td>6.18</td>
+    </tr>
+    <tr>
+      <th>No</th>
+      <td>113.20</td>
+      <td>113.46</td>
+      <td>109.26</td>
+      <td>112.67</td>
+      <td>-</td>
+      <td>1,259,980,000</td>
+      <td>4.20</td>
+    </tr>
+    <tr>
+      <th>No</th>
+      <td>112.80</td>
+      <td>122.00</td>
+      <td>111.55</td>
+      <td>117.20</td>
+      <td>-</td>
+      <td>1,255,970,000</td>
+      <td>10.45</td>
+    </tr>
+    <tr>
+      <th>No</th>
+      <td>117.70</td>
+      <td>118.68</td>
+      <td>113.01</td>
+      <td>115.24</td>
+      <td>-</td>
+      <td>1,311,050,000</td>
+      <td>5.67</td>
+    </tr>
+    <tr>
+      <th>No</th>
+      <td>115.64</td>
+      <td>117.45</td>
+      <td>113.44</td>
+      <td>115.00</td>
+      <td>-</td>
+      <td>1,288,630,000</td>
+      <td>4.01</td>
+    </tr>
+    <tr>
+      <th>No</th>
+      <td>114.82</td>
+      <td>118.70</td>
+      <td>114.50</td>
+      <td>117.98</td>
+      <td>-</td>
+      <td>1,279,980,000</td>
+      <td>4.20</td>
+    </tr>
+    <tr>
+      <th>No</th>
+      <td>117.98</td>
+      <td>119.80</td>
+      <td>110.25</td>
+      <td>111.50</td>
+      <td>-</td>
+      <td>1,315,720,000</td>
+      <td>9.55</td>
+    </tr>
+    <tr>
+      <th>No</th>
+      <td>111.40</td>
+      <td>115.81</td>
+      <td>103.50</td>
+      <td>114.22</td>
+      <td>-</td>
+      <td>1,242,760,000</td>
+      <td>12.31</td>
+    </tr>
+    <tr>
+      <th>No</th>
+      <td>114.22</td>
+      <td>118.76</td>
+      <td>112.20</td>
+      <td>118.76</td>
+      <td>-</td>
+      <td>1,274,620,000</td>
+      <td>6.56</td>
+    </tr>
+    <tr>
+      <th>No</th>
+      <td>118.21</td>
+      <td>125.30</td>
+      <td>116.57</td>
+      <td>123.02</td>
+      <td>-</td>
+      <td>1,319,590,000</td>
+      <td>8.73</td>
+    </tr>
+    <tr>
+      <th>No</th>
+      <td>123.50</td>
+      <td>125.25</td>
+      <td>122.30</td>
+      <td>123.50</td>
+      <td>-</td>
+      <td>1,379,140,000</td>
+      <td>2.95</td>
+    </tr>
+    <tr>
+      <th>No</th>
+      <td>123.21</td>
+      <td>124.50</td>
+      <td>119.57</td>
+      <td>121.99</td>
+      <td>-</td>
+      <td>1,376,370,000</td>
+      <td>4.93</td>
+    </tr>
+    <tr>
+      <th>No</th>
+      <td>122.50</td>
+      <td>123.62</td>
+      <td>120.12</td>
+      <td>122.00</td>
+      <td>-</td>
+      <td>1,368,910,000</td>
+      <td>3.50</td>
+    </tr>
+    <tr>
+      <th>No</th>
+      <td>122.02</td>
+      <td>123.00</td>
+      <td>121.21</td>
+      <td>122.88</td>
+      <td>-</td>
+      <td>1,363,940,000</td>
+      <td>1.79</td>
+    </tr>
+    <tr>
+      <th>No</th>
+      <td>122.89</td>
+      <td>124.00</td>
+      <td>122.00</td>
+      <td>123.89</td>
+      <td>-</td>
+      <td>1,374,130,000</td>
+      <td>2.00</td>
+    </tr>
+    <tr>
+      <th>No</th>
+      <td>123.80</td>
+      <td>126.93</td>
+      <td>123.10</td>
+      <td>126.70</td>
+      <td>-</td>
+      <td>1,384,780,000</td>
+      <td>3.83</td>
+    </tr>
+    <tr>
+      <th>No</th>
+      <td>126.30</td>
+      <td>133.85</td>
+      <td>125.72</td>
+      <td>133.20</td>
+      <td>-</td>
+      <td>1,413,300,000</td>
+      <td>8.13</td>
+    </tr>
+    <tr>
+      <th>No</th>
+      <td>133.10</td>
+      <td>133.22</td>
+      <td>128.90</td>
+      <td>131.98</td>
+      <td>-</td>
+      <td>1,489,950,000</td>
+      <td>4.32</td>
+    </tr>
+    <tr>
+      <th>No</th>
+      <td>131.99</td>
+      <td>136.00</td>
+      <td>130.62</td>
+      <td>133.48</td>
+      <td>-</td>
+      <td>1,478,030,000</td>
+      <td>5.38</td>
+    </tr>
+    <tr>
+      <th>No</th>
+      <td>133.50</td>
+      <td>135.47</td>
+      <td>124.70</td>
+      <td>129.75</td>
+      <td>-</td>
+      <td>1,495,520,000</td>
+      <td>10.77</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>4591.63</td>
+      <td>4591.63</td>
+      <td>4108.40</td>
+      <td>4236.31</td>
+      <td>2,987,330,000</td>
+      <td>75,955,500,000</td>
+      <td>483.23</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>4228.29</td>
+      <td>4427.84</td>
+      <td>3998.11</td>
+      <td>4376.53</td>
+      <td>2,697,970,000</td>
+      <td>69,954,400,000</td>
+      <td>429.73</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>4376.59</td>
+      <td>4617.25</td>
+      <td>4376.59</td>
+      <td>4597.12</td>
+      <td>2,172,100,000</td>
+      <td>72,418,700,000</td>
+      <td>240.66</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>4589.14</td>
+      <td>4655.04</td>
+      <td>4491.33</td>
+      <td>4599.88</td>
+      <td>1,844,620,000</td>
+      <td>75,945,000,000</td>
+      <td>163.71</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>4605.16</td>
+      <td>4661.00</td>
+      <td>4075.18</td>
+      <td>4228.75</td>
+      <td>2,700,890,000</td>
+      <td>76,220,200,000</td>
+      <td>585.82</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>4229.81</td>
+      <td>4308.82</td>
+      <td>4114.11</td>
+      <td>4226.06</td>
+      <td>1,386,230,000</td>
+      <td>70,017,200,000</td>
+      <td>194.71</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>4229.34</td>
+      <td>4245.44</td>
+      <td>3951.04</td>
+      <td>4122.94</td>
+      <td>1,679,090,000</td>
+      <td>70,018,100,000</td>
+      <td>294.40</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>4122.47</td>
+      <td>4261.67</td>
+      <td>4099.40</td>
+      <td>4161.27</td>
+      <td>1,557,330,000</td>
+      <td>68,256,000,000</td>
+      <td>162.27</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>4168.88</td>
+      <td>4344.65</td>
+      <td>4085.22</td>
+      <td>4130.81</td>
+      <td>1,864,530,000</td>
+      <td>69,033,400,000</td>
+      <td>259.43</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>4131.98</td>
+      <td>4131.98</td>
+      <td>3789.92</td>
+      <td>3882.59</td>
+      <td>2,219,410,000</td>
+      <td>68,432,200,000</td>
+      <td>342.06</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>3875.37</td>
+      <td>3920.60</td>
+      <td>3153.86</td>
+      <td>3154.95</td>
+      <td>2,716,310,000</td>
+      <td>64,191,600,000</td>
+      <td>766.74</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>3166.30</td>
+      <td>3733.45</td>
+      <td>2946.62</td>
+      <td>3637.52</td>
+      <td>4,148,070,000</td>
+      <td>52,453,500,000</td>
+      <td>786.83</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>3637.75</td>
+      <td>3808.84</td>
+      <td>3487.79</td>
+      <td>3625.04</td>
+      <td>1,818,400,000</td>
+      <td>60,271,600,000</td>
+      <td>321.05</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>3606.28</td>
+      <td>3664.81</td>
+      <td>3445.64</td>
+      <td>3582.88</td>
+      <td>1,239,150,000</td>
+      <td>59,757,800,000</td>
+      <td>219.17</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>3591.09</td>
+      <td>4079.23</td>
+      <td>3591.09</td>
+      <td>4065.20</td>
+      <td>1,943,210,000</td>
+      <td>59,514,100,000</td>
+      <td>488.14</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>4073.79</td>
+      <td>4094.07</td>
+      <td>3868.87</td>
+      <td>3924.97</td>
+      <td>1,563,980,000</td>
+      <td>67,520,300,000</td>
+      <td>225.20</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>3916.36</td>
+      <td>4031.39</td>
+      <td>3857.73</td>
+      <td>3905.95</td>
+      <td>1,213,830,000</td>
+      <td>64,918,500,000</td>
+      <td>173.66</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>3901.47</td>
+      <td>3916.42</td>
+      <td>3613.63</td>
+      <td>3631.04</td>
+      <td>1,411,480,000</td>
+      <td>64,677,600,000</td>
+      <td>302.79</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>3628.02</td>
+      <td>3758.27</td>
+      <td>3553.53</td>
+      <td>3630.70</td>
+      <td>1,194,830,000</td>
+      <td>60,152,300,000</td>
+      <td>204.74</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>3629.92</td>
+      <td>3819.21</td>
+      <td>3594.58</td>
+      <td>3792.40</td>
+      <td>928,114,000</td>
+      <td>60,190,000,000</td>
+      <td>224.63</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>3796.15</td>
+      <td>3796.15</td>
+      <td>3666.90</td>
+      <td>3682.84</td>
+      <td>768,015,000</td>
+      <td>62,954,300,000</td>
+      <td>129.25</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>3681.58</td>
+      <td>3950.25</td>
+      <td>3681.58</td>
+      <td>3926.07</td>
+      <td>1,374,210,000</td>
+      <td>61,061,100,000</td>
+      <td>268.67</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>3928.41</td>
+      <td>3969.89</td>
+      <td>3869.90</td>
+      <td>3892.35</td>
+      <td>1,043,740,000</td>
+      <td>65,161,000,000</td>
+      <td>99.99</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>3892.94</td>
+      <td>4210.05</td>
+      <td>3884.82</td>
+      <td>4200.67</td>
+      <td>1,686,880,000</td>
+      <td>64,579,200,000</td>
+      <td>325.23</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>4197.13</td>
+      <td>4279.31</td>
+      <td>4109.70</td>
+      <td>4174.73</td>
+      <td>1,712,320,000</td>
+      <td>69,633,200,000</td>
+      <td>169.61</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>4171.62</td>
+      <td>4214.63</td>
+      <td>4039.29</td>
+      <td>4163.07</td>
+      <td>1,367,050,000</td>
+      <td>69,219,200,000</td>
+      <td>175.34</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>4166.11</td>
+      <td>4358.43</td>
+      <td>4160.86</td>
+      <td>4338.71</td>
+      <td>1,207,450,000</td>
+      <td>69,136,600,000</td>
+      <td>197.57</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>4341.05</td>
+      <td>4403.74</td>
+      <td>4269.81</td>
+      <td>4403.74</td>
+      <td>1,208,210,000</td>
+      <td>72,047,300,000</td>
+      <td>133.93</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>4395.81</td>
+      <td>4470.23</td>
+      <td>4377.46</td>
+      <td>4409.32</td>
+      <td>1,431,730,000</td>
+      <td>72,963,200,000</td>
+      <td>92.77</td>
+    </tr>
+    <tr>
+      <th>Yes</th>
+      <td>4408.46</td>
+      <td>4432.47</td>
+      <td>4258.89</td>
+      <td>4317.48</td>
+      <td>1,288,020,000</td>
+      <td>73,181,300,000</td>
+      <td>173.58</td>
     </tr>
   </tbody>
 </table>
+<p>1620 rows × 7 columns</p>
 </div>
 </div>
 
@@ -12393,51 +12876,147 @@ Name: Genres, dtype: bool</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Read-Mulitple-Data-Frames">Read Mulitple Data Frames<a class="anchor-link" href="#Read-Mulitple-Data-Frames">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">btc</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/troy/Github/courses/crypto-pirates/cryptocurrencypricehistory/bitcoin_price.csv&#39;</span><span class="p">)</span>
+<span class="n">mon</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/troy/Github/courses/crypto-pirates/cryptocurrencypricehistory/monero_price.csv&#39;</span><span class="p">)</span>
+<span class="n">lit</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/troy/Github/courses/crypto-pirates/cryptocurrencypricehistory/litecoin_price.csv&#39;</span><span class="p">)</span>
+<span class="n">eth</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/Users/troy/Github/courses/crypto-pirates/cryptocurrencypricehistory/ethereum_price.csv&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Concatenating-Multiple-Data-Frames">Concatenating Multiple Data Frames<a class="anchor-link" href="#Concatenating-Multiple-Data-Frames">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Before I concatenate multiple data frames, I first added a new column to each data frame which is going to be used for map reducing later.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">btc</span><span class="p">[</span><span class="s1">&#39;CC&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Bitcoin&#39;</span>
+<span class="n">mon</span><span class="p">[</span><span class="s1">&#39;CC&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Monero&#39;</span>
+<span class="n">lit</span><span class="p">[</span><span class="s1">&#39;CC&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Litecoin&#39;</span>
+<span class="n">eth</span><span class="p">[</span><span class="s1">&#39;CC&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Ethereum&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now, I will add another column with the Moving averages of each CC</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">cufflinks</span> <span class="k">as</span> <span class="nn">cf</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">btc</span><span class="p">[</span><span class="s1">&#39;MA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">btc</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">mon</span><span class="p">[</span><span class="s1">&#39;MA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mon</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">lit</span><span class="p">[</span><span class="s1">&#39;MA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lit</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">eth</span><span class="p">[</span><span class="s1">&#39;MA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lit</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 
-<span class="n">cf</span><span class="o">.</span><span class="n">set_config_file</span><span class="p">(</span><span class="n">world_readable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">offline</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">pie</span><span class="o">=</span><span class="n">cf</span><span class="o">.</span><span class="n">datagen</span><span class="o">.</span><span class="n">pie</span><span class="p">()</span>
+<span class="n">btc</span><span class="p">[</span><span class="s1">&#39;SMA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">btc</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">mon</span><span class="p">[</span><span class="s1">&#39;SMA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mon</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">lit</span><span class="p">[</span><span class="s1">&#39;SMA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lit</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">eth</span><span class="p">[</span><span class="s1">&#39;SMA&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lit</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">eth</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>401.49000000000001</pre>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># pie.iplot(kind=&#39;pie&#39;,labels=new[&#39;Artists&#39;],values=new[&#39;Popularities&#39;])</span>
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Discover Iterations of Trends</p>
 
 </div>
 </div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">chief_string</span><span class="p">(</span><span class="n">genre</span><span class="p">):</span>
-    <span class="k">if</span> <span class="s1">&#39;classic rock&#39;</span> <span class="ow">in</span> <span class="n">genre</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># btc[[&#39;Date&#39;, &#39;Close&#39;, &#39;MA&#39;]]</span>
+<span class="c1"># onUp = (btc[&#39;MA&#39;] &gt; btc[&#39;Close&#39;]) &amp; (btc[])</span>
+<span class="c1"># btc[onUp][[&#39;Date&#39;,&#39;Close&#39;]]</span>
 
+<span class="n">iteration</span> <span class="o">=</span> <span class="p">(</span><span class="n">btc</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">btc</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">iteration2</span> <span class="o">=</span> <span class="p">(</span><span class="n">btc</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">1000</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">btc</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">2000</span><span class="p">)</span>
+<span class="n">iteration3</span> <span class="o">=</span> <span class="p">(</span><span class="n">btc</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">2000</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">btc</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">3000</span><span class="p">)</span>
+<span class="n">iteration4</span> <span class="o">=</span> <span class="p">(</span><span class="n">btc</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">3000</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">btc</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">4000</span><span class="p">)</span>
+<span class="n">iteration5</span> <span class="o">=</span> <span class="p">(</span><span class="n">btc</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">4000</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">btc</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">5000</span><span class="p">)</span>
 
-<span class="n">result</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Genres&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">chief_string</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-<span class="n">classicRock</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">result</span><span class="p">][[</span><span class="s1">&#39;Artists&#39;</span><span class="p">]]</span>
-<span class="n">classicRock</span>
+<span class="n">column</span> <span class="o">=</span> <span class="s1">&#39;Iteration&#39;</span>
+<span class="n">btc</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">iteration</span><span class="p">,</span> <span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;0-1000&#39;</span>
+<span class="n">btc</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">iteration2</span><span class="p">,</span> <span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;1000-2000&#39;</span>
+<span class="n">btc</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">iteration3</span><span class="p">,</span> <span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;2000-000&#39;</span>
+<span class="n">btc</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">iteration4</span><span class="p">,</span> <span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;3000-4000&#39;</span>
+<span class="n">btc</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">iteration5</span><span class="p">,</span> <span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;4000-5000&#39;</span>
+<span class="n">btc</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">&#39;CC&#39;</span><span class="p">,</span><span class="s1">&#39;Iteration&#39;</span><span class="p">,</span><span class="s1">&#39;Date&#39;</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -12473,28 +13052,714 @@ Name: Genres, dtype: bool</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Artists</th>
+      <th></th>
+      <th></th>
+      <th>Open</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Close</th>
+      <th>Volume</th>
+      <th>Market Cap</th>
+      <th>MA</th>
+      <th>SMA</th>
+    </tr>
+    <tr>
+      <th>CC</th>
+      <th>Iteration</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>4</th>
-      <td>Neil Young</td>
+      <th rowspan="61" valign="top">Bitcoin</th>
+      <th rowspan="30" valign="top">0-1000</th>
+      <th>28-Apr-13</th>
+      <td>135.30</td>
+      <td>135.98</td>
+      <td>132.10</td>
+      <td>134.21</td>
+      <td>-</td>
+      <td>1,500,520,000</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>Grateful Dead</td>
+      <th>29-Apr-13</th>
+      <td>134.44</td>
+      <td>147.49</td>
+      <td>134.00</td>
+      <td>144.54</td>
+      <td>-</td>
+      <td>1,491,160,000</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>16</th>
-      <td>Jimi Hendrix</td>
+      <th>30-Apr-13</th>
+      <td>144.00</td>
+      <td>146.93</td>
+      <td>134.05</td>
+      <td>139.00</td>
+      <td>-</td>
+      <td>1,597,780,000</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>19</th>
-      <td>Guns N' Roses</td>
+      <th>1-May-13</th>
+      <td>139.00</td>
+      <td>139.89</td>
+      <td>107.72</td>
+      <td>116.99</td>
+      <td>-</td>
+      <td>1,542,820,000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2-May-13</th>
+      <td>116.38</td>
+      <td>125.60</td>
+      <td>92.28</td>
+      <td>105.21</td>
+      <td>-</td>
+      <td>1,292,190,000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3-May-13</th>
+      <td>106.25</td>
+      <td>108.13</td>
+      <td>79.10</td>
+      <td>97.75</td>
+      <td>-</td>
+      <td>1,180,070,000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4-May-13</th>
+      <td>98.10</td>
+      <td>115.00</td>
+      <td>92.50</td>
+      <td>112.50</td>
+      <td>-</td>
+      <td>1,089,890,000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>5-May-13</th>
+      <td>112.90</td>
+      <td>118.80</td>
+      <td>107.14</td>
+      <td>115.91</td>
+      <td>-</td>
+      <td>1,254,760,000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>6-May-13</th>
+      <td>115.98</td>
+      <td>124.66</td>
+      <td>106.64</td>
+      <td>112.30</td>
+      <td>-</td>
+      <td>1,289,470,000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>7-May-13</th>
+      <td>112.25</td>
+      <td>113.44</td>
+      <td>97.70</td>
+      <td>111.50</td>
+      <td>-</td>
+      <td>1,248,470,000</td>
+      <td>118.991</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>8-May-13</th>
+      <td>109.60</td>
+      <td>115.78</td>
+      <td>109.60</td>
+      <td>113.57</td>
+      <td>-</td>
+      <td>1,219,450,000</td>
+      <td>116.927</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>9-May-13</th>
+      <td>113.20</td>
+      <td>113.46</td>
+      <td>109.26</td>
+      <td>112.67</td>
+      <td>-</td>
+      <td>1,259,980,000</td>
+      <td>113.740</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10-May-13</th>
+      <td>112.80</td>
+      <td>122.00</td>
+      <td>111.55</td>
+      <td>117.20</td>
+      <td>-</td>
+      <td>1,255,970,000</td>
+      <td>111.560</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>11-May-13</th>
+      <td>117.70</td>
+      <td>118.68</td>
+      <td>113.01</td>
+      <td>115.24</td>
+      <td>-</td>
+      <td>1,311,050,000</td>
+      <td>111.385</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>12-May-13</th>
+      <td>115.64</td>
+      <td>117.45</td>
+      <td>113.44</td>
+      <td>115.00</td>
+      <td>-</td>
+      <td>1,288,630,000</td>
+      <td>112.364</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>13-May-13</th>
+      <td>114.82</td>
+      <td>118.70</td>
+      <td>114.50</td>
+      <td>117.98</td>
+      <td>-</td>
+      <td>1,279,980,000</td>
+      <td>114.387</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>14-May-13</th>
+      <td>117.98</td>
+      <td>119.80</td>
+      <td>110.25</td>
+      <td>111.50</td>
+      <td>-</td>
+      <td>1,315,720,000</td>
+      <td>114.287</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>15-May-13</th>
+      <td>111.40</td>
+      <td>115.81</td>
+      <td>103.50</td>
+      <td>114.22</td>
+      <td>-</td>
+      <td>1,242,760,000</td>
+      <td>114.118</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>16-May-13</th>
+      <td>114.22</td>
+      <td>118.76</td>
+      <td>112.20</td>
+      <td>118.76</td>
+      <td>-</td>
+      <td>1,274,620,000</td>
+      <td>114.764</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>17-May-13</th>
+      <td>118.21</td>
+      <td>125.30</td>
+      <td>116.57</td>
+      <td>123.02</td>
+      <td>-</td>
+      <td>1,319,590,000</td>
+      <td>115.916</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>18-May-13</th>
+      <td>123.50</td>
+      <td>125.25</td>
+      <td>122.30</td>
+      <td>123.50</td>
+      <td>-</td>
+      <td>1,379,140,000</td>
+      <td>116.909</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>19-May-13</th>
+      <td>123.21</td>
+      <td>124.50</td>
+      <td>119.57</td>
+      <td>121.99</td>
+      <td>-</td>
+      <td>1,376,370,000</td>
+      <td>117.841</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>20-May-13</th>
+      <td>122.50</td>
+      <td>123.62</td>
+      <td>120.12</td>
+      <td>122.00</td>
+      <td>-</td>
+      <td>1,368,910,000</td>
+      <td>118.321</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>21-May-13</th>
+      <td>122.02</td>
+      <td>123.00</td>
+      <td>121.21</td>
+      <td>122.88</td>
+      <td>-</td>
+      <td>1,363,940,000</td>
+      <td>119.085</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>22-May-13</th>
+      <td>122.89</td>
+      <td>124.00</td>
+      <td>122.00</td>
+      <td>123.89</td>
+      <td>-</td>
+      <td>1,374,130,000</td>
+      <td>119.974</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>23-May-13</th>
+      <td>123.80</td>
+      <td>126.93</td>
+      <td>123.10</td>
+      <td>126.70</td>
+      <td>-</td>
+      <td>1,384,780,000</td>
+      <td>120.846</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>24-May-13</th>
+      <td>126.30</td>
+      <td>133.85</td>
+      <td>125.72</td>
+      <td>133.20</td>
+      <td>-</td>
+      <td>1,413,300,000</td>
+      <td>123.016</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>25-May-13</th>
+      <td>133.10</td>
+      <td>133.22</td>
+      <td>128.90</td>
+      <td>131.98</td>
+      <td>-</td>
+      <td>1,489,950,000</td>
+      <td>124.792</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>26-May-13</th>
+      <td>131.99</td>
+      <td>136.00</td>
+      <td>130.62</td>
+      <td>133.48</td>
+      <td>-</td>
+      <td>1,478,030,000</td>
+      <td>126.264</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>27-May-13</th>
+      <td>133.50</td>
+      <td>135.47</td>
+      <td>124.70</td>
+      <td>129.75</td>
+      <td>-</td>
+      <td>1,495,520,000</td>
+      <td>126.937</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th rowspan="9" valign="top">4000-5000</th>
+      <th>4-Sep-17</th>
+      <td>4591.63</td>
+      <td>4591.63</td>
+      <td>4108.40</td>
+      <td>4236.31</td>
+      <td>2,987,330,000</td>
+      <td>75,955,500,000</td>
+      <td>4525.570</td>
+      <td>3562.9578</td>
+    </tr>
+    <tr>
+      <th>5-Sep-17</th>
+      <td>4228.29</td>
+      <td>4427.84</td>
+      <td>3998.11</td>
+      <td>4376.53</td>
+      <td>2,697,970,000</td>
+      <td>69,954,400,000</td>
+      <td>4527.983</td>
+      <td>3605.9202</td>
+    </tr>
+    <tr>
+      <th>6-Sep-17</th>
+      <td>4376.59</td>
+      <td>4617.25</td>
+      <td>4376.59</td>
+      <td>4597.12</td>
+      <td>2,172,100,000</td>
+      <td>72,418,700,000</td>
+      <td>4549.407</td>
+      <td>3651.4850</td>
+    </tr>
+    <tr>
+      <th>7-Sep-17</th>
+      <td>4589.14</td>
+      <td>4655.04</td>
+      <td>4491.33</td>
+      <td>4599.88</td>
+      <td>1,844,620,000</td>
+      <td>75,945,000,000</td>
+      <td>4571.129</td>
+      <td>3698.0140</td>
+    </tr>
+    <tr>
+      <th>8-Sep-17</th>
+      <td>4605.16</td>
+      <td>4661.00</td>
+      <td>4075.18</td>
+      <td>4228.75</td>
+      <td>2,700,890,000</td>
+      <td>76,220,200,000</td>
+      <td>4536.102</td>
+      <td>3726.2370</td>
+    </tr>
+    <tr>
+      <th>9-Sep-17</th>
+      <td>4229.81</td>
+      <td>4308.82</td>
+      <td>4114.11</td>
+      <td>4226.06</td>
+      <td>1,386,230,000</td>
+      <td>70,017,200,000</td>
+      <td>4502.178</td>
+      <td>3757.4030</td>
+    </tr>
+    <tr>
+      <th>10-Sep-17</th>
+      <td>4229.34</td>
+      <td>4245.44</td>
+      <td>3951.04</td>
+      <td>4122.94</td>
+      <td>1,679,090,000</td>
+      <td>70,018,100,000</td>
+      <td>4444.133</td>
+      <td>3783.6594</td>
+    </tr>
+    <tr>
+      <th>11-Sep-17</th>
+      <td>4122.47</td>
+      <td>4261.67</td>
+      <td>4099.40</td>
+      <td>4161.27</td>
+      <td>1,557,330,000</td>
+      <td>68,256,000,000</td>
+      <td>4371.059</td>
+      <td>3812.2768</td>
+    </tr>
+    <tr>
+      <th>12-Sep-17</th>
+      <td>4168.88</td>
+      <td>4344.65</td>
+      <td>4085.22</td>
+      <td>4130.81</td>
+      <td>1,864,530,000</td>
+      <td>69,033,400,000</td>
+      <td>4326.263</td>
+      <td>3839.7958</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">3000-4000</th>
+      <th>13-Sep-17</th>
+      <td>4131.98</td>
+      <td>4131.98</td>
+      <td>3789.92</td>
+      <td>3882.59</td>
+      <td>2,219,410,000</td>
+      <td>68,432,200,000</td>
+      <td>4256.226</td>
+      <td>3865.9180</td>
+    </tr>
+    <tr>
+      <th>14-Sep-17</th>
+      <td>3875.37</td>
+      <td>3920.60</td>
+      <td>3153.86</td>
+      <td>3154.95</td>
+      <td>2,716,310,000</td>
+      <td>64,191,600,000</td>
+      <td>4148.090</td>
+      <td>3878.4280</td>
+    </tr>
+    <tr>
+      <th>15-Sep-17</th>
+      <td>3166.30</td>
+      <td>3733.45</td>
+      <td>2946.62</td>
+      <td>3637.52</td>
+      <td>4,148,070,000</td>
+      <td>52,453,500,000</td>
+      <td>4074.189</td>
+      <td>3897.7428</td>
+    </tr>
+    <tr>
+      <th>16-Sep-17</th>
+      <td>3637.75</td>
+      <td>3808.84</td>
+      <td>3487.79</td>
+      <td>3625.04</td>
+      <td>1,818,400,000</td>
+      <td>60,271,600,000</td>
+      <td>3976.981</td>
+      <td>3914.0634</td>
+    </tr>
+    <tr>
+      <th>17-Sep-17</th>
+      <td>3606.28</td>
+      <td>3664.81</td>
+      <td>3445.64</td>
+      <td>3582.88</td>
+      <td>1,239,150,000</td>
+      <td>59,757,800,000</td>
+      <td>3875.281</td>
+      <td>3931.1920</td>
+    </tr>
+    <tr>
+      <th>4000-5000</th>
+      <th>18-Sep-17</th>
+      <td>3591.09</td>
+      <td>4079.23</td>
+      <td>3591.09</td>
+      <td>4065.20</td>
+      <td>1,943,210,000</td>
+      <td>59,514,100,000</td>
+      <td>3858.926</td>
+      <td>3957.3524</td>
+    </tr>
+    <tr>
+      <th rowspan="8" valign="top">3000-4000</th>
+      <th>19-Sep-17</th>
+      <td>4073.79</td>
+      <td>4094.07</td>
+      <td>3868.87</td>
+      <td>3924.97</td>
+      <td>1,563,980,000</td>
+      <td>67,520,300,000</td>
+      <td>3828.817</td>
+      <td>3978.3450</td>
+    </tr>
+    <tr>
+      <th>20-Sep-17</th>
+      <td>3916.36</td>
+      <td>4031.39</td>
+      <td>3857.73</td>
+      <td>3905.95</td>
+      <td>1,213,830,000</td>
+      <td>64,918,500,000</td>
+      <td>3807.118</td>
+      <td>4002.0988</td>
+    </tr>
+    <tr>
+      <th>21-Sep-17</th>
+      <td>3901.47</td>
+      <td>3916.42</td>
+      <td>3613.63</td>
+      <td>3631.04</td>
+      <td>1,411,480,000</td>
+      <td>64,677,600,000</td>
+      <td>3754.095</td>
+      <td>4020.5062</td>
+    </tr>
+    <tr>
+      <th>22-Sep-17</th>
+      <td>3628.02</td>
+      <td>3758.27</td>
+      <td>3553.53</td>
+      <td>3630.70</td>
+      <td>1,194,830,000</td>
+      <td>60,152,300,000</td>
+      <td>3704.084</td>
+      <td>4037.0256</td>
+    </tr>
+    <tr>
+      <th>23-Sep-17</th>
+      <td>3629.92</td>
+      <td>3819.21</td>
+      <td>3594.58</td>
+      <td>3792.40</td>
+      <td>928,114,000</td>
+      <td>60,190,000,000</td>
+      <td>3695.065</td>
+      <td>4054.9558</td>
+    </tr>
+    <tr>
+      <th>24-Sep-17</th>
+      <td>3796.15</td>
+      <td>3796.15</td>
+      <td>3666.90</td>
+      <td>3682.84</td>
+      <td>768,015,000</td>
+      <td>62,954,300,000</td>
+      <td>3747.854</td>
+      <td>4063.5544</td>
+    </tr>
+    <tr>
+      <th>25-Sep-17</th>
+      <td>3681.58</td>
+      <td>3950.25</td>
+      <td>3681.58</td>
+      <td>3926.07</td>
+      <td>1,374,210,000</td>
+      <td>61,061,100,000</td>
+      <td>3776.709</td>
+      <td>4077.7970</td>
+    </tr>
+    <tr>
+      <th>26-Sep-17</th>
+      <td>3928.41</td>
+      <td>3969.89</td>
+      <td>3869.90</td>
+      <td>3892.35</td>
+      <td>1,043,740,000</td>
+      <td>65,161,000,000</td>
+      <td>3803.440</td>
+      <td>4088.0652</td>
+    </tr>
+    <tr>
+      <th rowspan="7" valign="top">4000-5000</th>
+      <th>27-Sep-17</th>
+      <td>3892.94</td>
+      <td>4210.05</td>
+      <td>3884.82</td>
+      <td>4200.67</td>
+      <td>1,686,880,000</td>
+      <td>64,579,200,000</td>
+      <td>3865.219</td>
+      <td>4103.6798</td>
+    </tr>
+    <tr>
+      <th>28-Sep-17</th>
+      <td>4197.13</td>
+      <td>4279.31</td>
+      <td>4109.70</td>
+      <td>4174.73</td>
+      <td>1,712,320,000</td>
+      <td>69,633,200,000</td>
+      <td>3876.172</td>
+      <td>4120.3250</td>
+    </tr>
+    <tr>
+      <th>29-Sep-17</th>
+      <td>4171.62</td>
+      <td>4214.63</td>
+      <td>4039.29</td>
+      <td>4163.07</td>
+      <td>1,367,050,000</td>
+      <td>69,219,200,000</td>
+      <td>3899.982</td>
+      <td>4135.9608</td>
+    </tr>
+    <tr>
+      <th>30-Sep-17</th>
+      <td>4166.11</td>
+      <td>4358.43</td>
+      <td>4160.86</td>
+      <td>4338.71</td>
+      <td>1,207,450,000</td>
+      <td>69,136,600,000</td>
+      <td>3943.258</td>
+      <td>4149.7226</td>
+    </tr>
+    <tr>
+      <th>1-Oct-17</th>
+      <td>4341.05</td>
+      <td>4403.74</td>
+      <td>4269.81</td>
+      <td>4403.74</td>
+      <td>1,208,210,000</td>
+      <td>72,047,300,000</td>
+      <td>4020.528</td>
+      <td>4160.1032</td>
+    </tr>
+    <tr>
+      <th>2-Oct-17</th>
+      <td>4395.81</td>
+      <td>4470.23</td>
+      <td>4377.46</td>
+      <td>4409.32</td>
+      <td>1,431,730,000</td>
+      <td>72,963,200,000</td>
+      <td>4098.390</td>
+      <td>4166.8244</td>
+    </tr>
+    <tr>
+      <th>3-Oct-17</th>
+      <td>4408.46</td>
+      <td>4432.47</td>
+      <td>4258.89</td>
+      <td>4317.48</td>
+      <td>1,288,020,000</td>
+      <td>73,181,300,000</td>
+      <td>4150.898</td>
+      <td>4166.6714</td>
     </tr>
   </tbody>
 </table>
+<p>1620 rows × 8 columns</p>
 </div>
 </div>
 
@@ -12503,31 +13768,22 @@ Name: Genres, dtype: bool</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Concatenate-and-add-proper-indexes">Concatenate and add proper indexes<a class="anchor-link" href="#Concatenate-and-add-proper-indexes">&#182;</a></h3>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">chief_string</span><span class="p">(</span><span class="n">genre</span><span class="p">):</span>
-    <span class="k">if</span> <span class="s1">&#39;alternative rock&#39;</span> <span class="ow">in</span> <span class="n">genre</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">alternativeRock</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">result</span><span class="p">][[</span><span class="s1">&#39;Artists&#39;</span><span class="p">]]</span>
-<span class="n">alternativeRock</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">master</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">btc</span><span class="p">,</span><span class="n">mon</span><span class="p">,</span><span class="n">lit</span><span class="p">,</span><span class="n">eth</span><span class="p">])</span>
+<span class="n">master</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">&#39;CC&#39;</span><span class="p">,</span><span class="s1">&#39;Iteration&#39;</span><span class="p">,</span><span class="s1">&#39;Date&#39;</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -12540,7 +13796,7 @@ Name: Genres, dtype: bool</pre>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[15]:</div>
+<div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -12563,28 +13819,712 @@ Name: Genres, dtype: bool</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Artists</th>
+      <th></th>
+      <th></th>
+      <th>Close</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>MA</th>
+      <th>Market Cap</th>
+      <th>Open</th>
+      <th>SMA</th>
+      <th>Volume</th>
+    </tr>
+    <tr>
+      <th>CC</th>
+      <th>Iteration</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>4</th>
-      <td>Neil Young</td>
+      <th rowspan="30" valign="top">Bitcoin</th>
+      <th rowspan="30" valign="top">0-1000</th>
+      <th>28-Apr-13</th>
+      <td>134.21</td>
+      <td>135.98</td>
+      <td>132.10</td>
+      <td>NaN</td>
+      <td>1,500,520,000</td>
+      <td>135.30</td>
+      <td>NaN</td>
+      <td>-</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>Grateful Dead</td>
+      <th>29-Apr-13</th>
+      <td>144.54</td>
+      <td>147.49</td>
+      <td>134.00</td>
+      <td>NaN</td>
+      <td>1,491,160,000</td>
+      <td>134.44</td>
+      <td>NaN</td>
+      <td>-</td>
     </tr>
     <tr>
-      <th>16</th>
-      <td>Jimi Hendrix</td>
+      <th>30-Apr-13</th>
+      <td>139.00</td>
+      <td>146.93</td>
+      <td>134.05</td>
+      <td>NaN</td>
+      <td>1,597,780,000</td>
+      <td>144.00</td>
+      <td>NaN</td>
+      <td>-</td>
     </tr>
     <tr>
-      <th>19</th>
-      <td>Guns N' Roses</td>
+      <th>1-May-13</th>
+      <td>116.99</td>
+      <td>139.89</td>
+      <td>107.72</td>
+      <td>NaN</td>
+      <td>1,542,820,000</td>
+      <td>139.00</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>2-May-13</th>
+      <td>105.21</td>
+      <td>125.60</td>
+      <td>92.28</td>
+      <td>NaN</td>
+      <td>1,292,190,000</td>
+      <td>116.38</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>3-May-13</th>
+      <td>97.75</td>
+      <td>108.13</td>
+      <td>79.10</td>
+      <td>NaN</td>
+      <td>1,180,070,000</td>
+      <td>106.25</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>4-May-13</th>
+      <td>112.50</td>
+      <td>115.00</td>
+      <td>92.50</td>
+      <td>NaN</td>
+      <td>1,089,890,000</td>
+      <td>98.10</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>5-May-13</th>
+      <td>115.91</td>
+      <td>118.80</td>
+      <td>107.14</td>
+      <td>NaN</td>
+      <td>1,254,760,000</td>
+      <td>112.90</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>6-May-13</th>
+      <td>112.30</td>
+      <td>124.66</td>
+      <td>106.64</td>
+      <td>NaN</td>
+      <td>1,289,470,000</td>
+      <td>115.98</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>7-May-13</th>
+      <td>111.50</td>
+      <td>113.44</td>
+      <td>97.70</td>
+      <td>118.991</td>
+      <td>1,248,470,000</td>
+      <td>112.25</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>8-May-13</th>
+      <td>113.57</td>
+      <td>115.78</td>
+      <td>109.60</td>
+      <td>116.927</td>
+      <td>1,219,450,000</td>
+      <td>109.60</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>9-May-13</th>
+      <td>112.67</td>
+      <td>113.46</td>
+      <td>109.26</td>
+      <td>113.740</td>
+      <td>1,259,980,000</td>
+      <td>113.20</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>10-May-13</th>
+      <td>117.20</td>
+      <td>122.00</td>
+      <td>111.55</td>
+      <td>111.560</td>
+      <td>1,255,970,000</td>
+      <td>112.80</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>11-May-13</th>
+      <td>115.24</td>
+      <td>118.68</td>
+      <td>113.01</td>
+      <td>111.385</td>
+      <td>1,311,050,000</td>
+      <td>117.70</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>12-May-13</th>
+      <td>115.00</td>
+      <td>117.45</td>
+      <td>113.44</td>
+      <td>112.364</td>
+      <td>1,288,630,000</td>
+      <td>115.64</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>13-May-13</th>
+      <td>117.98</td>
+      <td>118.70</td>
+      <td>114.50</td>
+      <td>114.387</td>
+      <td>1,279,980,000</td>
+      <td>114.82</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>14-May-13</th>
+      <td>111.50</td>
+      <td>119.80</td>
+      <td>110.25</td>
+      <td>114.287</td>
+      <td>1,315,720,000</td>
+      <td>117.98</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>15-May-13</th>
+      <td>114.22</td>
+      <td>115.81</td>
+      <td>103.50</td>
+      <td>114.118</td>
+      <td>1,242,760,000</td>
+      <td>111.40</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>16-May-13</th>
+      <td>118.76</td>
+      <td>118.76</td>
+      <td>112.20</td>
+      <td>114.764</td>
+      <td>1,274,620,000</td>
+      <td>114.22</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>17-May-13</th>
+      <td>123.02</td>
+      <td>125.30</td>
+      <td>116.57</td>
+      <td>115.916</td>
+      <td>1,319,590,000</td>
+      <td>118.21</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>18-May-13</th>
+      <td>123.50</td>
+      <td>125.25</td>
+      <td>122.30</td>
+      <td>116.909</td>
+      <td>1,379,140,000</td>
+      <td>123.50</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>19-May-13</th>
+      <td>121.99</td>
+      <td>124.50</td>
+      <td>119.57</td>
+      <td>117.841</td>
+      <td>1,376,370,000</td>
+      <td>123.21</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>20-May-13</th>
+      <td>122.00</td>
+      <td>123.62</td>
+      <td>120.12</td>
+      <td>118.321</td>
+      <td>1,368,910,000</td>
+      <td>122.50</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>21-May-13</th>
+      <td>122.88</td>
+      <td>123.00</td>
+      <td>121.21</td>
+      <td>119.085</td>
+      <td>1,363,940,000</td>
+      <td>122.02</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>22-May-13</th>
+      <td>123.89</td>
+      <td>124.00</td>
+      <td>122.00</td>
+      <td>119.974</td>
+      <td>1,374,130,000</td>
+      <td>122.89</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>23-May-13</th>
+      <td>126.70</td>
+      <td>126.93</td>
+      <td>123.10</td>
+      <td>120.846</td>
+      <td>1,384,780,000</td>
+      <td>123.80</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>24-May-13</th>
+      <td>133.20</td>
+      <td>133.85</td>
+      <td>125.72</td>
+      <td>123.016</td>
+      <td>1,413,300,000</td>
+      <td>126.30</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>25-May-13</th>
+      <td>131.98</td>
+      <td>133.22</td>
+      <td>128.90</td>
+      <td>124.792</td>
+      <td>1,489,950,000</td>
+      <td>133.10</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>26-May-13</th>
+      <td>133.48</td>
+      <td>136.00</td>
+      <td>130.62</td>
+      <td>126.264</td>
+      <td>1,478,030,000</td>
+      <td>131.99</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>27-May-13</th>
+      <td>129.75</td>
+      <td>135.47</td>
+      <td>124.70</td>
+      <td>126.937</td>
+      <td>1,495,520,000</td>
+      <td>133.50</td>
+      <td>NaN</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th rowspan="30" valign="top">Ethereum</th>
+      <th rowspan="30" valign="top">NaN</th>
+      <th>4-Sep-17</th>
+      <td>295.17</td>
+      <td>347.13</td>
+      <td>279.94</td>
+      <td>1.676</td>
+      <td>32,774,000,000</td>
+      <td>347.13</td>
+      <td>1.4812</td>
+      <td>1,801,690,000</td>
+    </tr>
+    <tr>
+      <th>5-Sep-17</th>
+      <td>312.99</td>
+      <td>318.57</td>
+      <td>268.29</td>
+      <td>1.715</td>
+      <td>28,100,000,000</td>
+      <td>297.57</td>
+      <td>1.4854</td>
+      <td>1,551,050,000</td>
+    </tr>
+    <tr>
+      <th>6-Sep-17</th>
+      <td>334.34</td>
+      <td>334.66</td>
+      <td>313.49</td>
+      <td>1.753</td>
+      <td>29,639,100,000</td>
+      <td>313.80</td>
+      <td>1.4902</td>
+      <td>1,058,830,000</td>
+    </tr>
+    <tr>
+      <th>7-Sep-17</th>
+      <td>329.43</td>
+      <td>333.52</td>
+      <td>319.94</td>
+      <td>1.788</td>
+      <td>31,507,500,000</td>
+      <td>333.52</td>
+      <td>1.4958</td>
+      <td>718,624,000</td>
+    </tr>
+    <tr>
+      <th>8-Sep-17</th>
+      <td>296.50</td>
+      <td>329.64</td>
+      <td>285.16</td>
+      <td>1.804</td>
+      <td>31,147,200,000</td>
+      <td>329.64</td>
+      <td>1.4994</td>
+      <td>1,098,780,000</td>
+    </tr>
+    <tr>
+      <th>9-Sep-17</th>
+      <td>294.40</td>
+      <td>299.89</td>
+      <td>287.22</td>
+      <td>1.783</td>
+      <td>27,990,500,000</td>
+      <td>296.17</td>
+      <td>1.5026</td>
+      <td>528,621,000</td>
+    </tr>
+    <tr>
+      <th>10-Sep-17</th>
+      <td>288.75</td>
+      <td>294.76</td>
+      <td>268.97</td>
+      <td>1.771</td>
+      <td>27,797,200,000</td>
+      <td>294.06</td>
+      <td>1.5084</td>
+      <td>698,326,000</td>
+    </tr>
+    <tr>
+      <th>11-Sep-17</th>
+      <td>294.53</td>
+      <td>300.69</td>
+      <td>286.69</td>
+      <td>1.757</td>
+      <td>27,394,400,000</td>
+      <td>289.75</td>
+      <td>1.5146</td>
+      <td>571,307,000</td>
+    </tr>
+    <tr>
+      <th>12-Sep-17</th>
+      <td>291.46</td>
+      <td>311.19</td>
+      <td>287.23</td>
+      <td>1.744</td>
+      <td>27,861,800,000</td>
+      <td>294.63</td>
+      <td>1.5204</td>
+      <td>753,144,000</td>
+    </tr>
+    <tr>
+      <th>13-Sep-17</th>
+      <td>277.11</td>
+      <td>291.12</td>
+      <td>260.61</td>
+      <td>1.738</td>
+      <td>27,535,700,000</td>
+      <td>291.12</td>
+      <td>1.5272</td>
+      <td>921,692,000</td>
+    </tr>
+    <tr>
+      <th>14-Sep-17</th>
+      <td>213.91</td>
+      <td>280.84</td>
+      <td>213.91</td>
+      <td>1.729</td>
+      <td>26,166,100,000</td>
+      <td>276.59</td>
+      <td>1.5342</td>
+      <td>1,184,590,000</td>
+    </tr>
+    <tr>
+      <th>15-Sep-17</th>
+      <td>250.46</td>
+      <td>258.65</td>
+      <td>195.03</td>
+      <td>1.718</td>
+      <td>20,364,900,000</td>
+      <td>215.22</td>
+      <td>1.5406</td>
+      <td>1,935,700,000</td>
+    </tr>
+    <tr>
+      <th>16-Sep-17</th>
+      <td>246.52</td>
+      <td>262.59</td>
+      <td>238.22</td>
+      <td>1.714</td>
+      <td>23,742,600,000</td>
+      <td>250.87</td>
+      <td>1.5486</td>
+      <td>711,737,000</td>
+    </tr>
+    <tr>
+      <th>17-Sep-17</th>
+      <td>251.75</td>
+      <td>257.00</td>
+      <td>235.24</td>
+      <td>1.713</td>
+      <td>23,272,500,000</td>
+      <td>245.85</td>
+      <td>1.5564</td>
+      <td>427,452,000</td>
+    </tr>
+    <tr>
+      <th>18-Sep-17</th>
+      <td>293.50</td>
+      <td>293.50</td>
+      <td>252.23</td>
+      <td>1.725</td>
+      <td>23,881,200,000</td>
+      <td>252.23</td>
+      <td>1.5632</td>
+      <td>1,127,750,000</td>
+    </tr>
+    <tr>
+      <th>19-Sep-17</th>
+      <td>282.80</td>
+      <td>295.77</td>
+      <td>274.48</td>
+      <td>1.742</td>
+      <td>27,809,300,000</td>
+      <td>293.66</td>
+      <td>1.5700</td>
+      <td>646,909,000</td>
+    </tr>
+    <tr>
+      <th>20-Sep-17</th>
+      <td>283.74</td>
+      <td>290.89</td>
+      <td>278.05</td>
+      <td>1.755</td>
+      <td>26,712,400,000</td>
+      <td>282.01</td>
+      <td>1.5768</td>
+      <td>421,404,000</td>
+    </tr>
+    <tr>
+      <th>21-Sep-17</th>
+      <td>258.58</td>
+      <td>286.61</td>
+      <td>255.02</td>
+      <td>1.772</td>
+      <td>26,836,000,000</td>
+      <td>283.26</td>
+      <td>1.5856</td>
+      <td>601,266,000</td>
+    </tr>
+    <tr>
+      <th>22-Sep-17</th>
+      <td>264.31</td>
+      <td>270.54</td>
+      <td>256.22</td>
+      <td>1.805</td>
+      <td>24,458,400,000</td>
+      <td>258.11</td>
+      <td>1.5976</td>
+      <td>430,081,000</td>
+    </tr>
+    <tr>
+      <th>23-Sep-17</th>
+      <td>286.17</td>
+      <td>286.17</td>
+      <td>261.12</td>
+      <td>1.831</td>
+      <td>25,077,100,000</td>
+      <td>264.60</td>
+      <td>1.6116</td>
+      <td>450,934,000</td>
+    </tr>
+    <tr>
+      <th>24-Sep-17</th>
+      <td>282.48</td>
+      <td>292.95</td>
+      <td>278.13</td>
+      <td>1.943</td>
+      <td>27,129,900,000</td>
+      <td>286.21</td>
+      <td>1.6416</td>
+      <td>571,411,000</td>
+    </tr>
+    <tr>
+      <th>25-Sep-17</th>
+      <td>292.33</td>
+      <td>293.51</td>
+      <td>281.88</td>
+      <td>2.059</td>
+      <td>26,755,500,000</td>
+      <td>282.22</td>
+      <td>1.6722</td>
+      <td>483,161,000</td>
+    </tr>
+    <tr>
+      <th>26-Sep-17</th>
+      <td>287.44</td>
+      <td>293.75</td>
+      <td>287.02</td>
+      <td>2.190</td>
+      <td>27,720,000,000</td>
+      <td>292.35</td>
+      <td>1.7070</td>
+      <td>345,801,000</td>
+    </tr>
+    <tr>
+      <th>27-Sep-17</th>
+      <td>306.47</td>
+      <td>308.01</td>
+      <td>286.82</td>
+      <td>2.291</td>
+      <td>27,219,400,000</td>
+      <td>287.02</td>
+      <td>1.7344</td>
+      <td>550,244,000</td>
+    </tr>
+    <tr>
+      <th>28-Sep-17</th>
+      <td>299.15</td>
+      <td>307.20</td>
+      <td>295.47</td>
+      <td>2.419</td>
+      <td>29,068,700,000</td>
+      <td>306.47</td>
+      <td>1.7670</td>
+      <td>501,894,000</td>
+    </tr>
+    <tr>
+      <th>29-Sep-17</th>
+      <td>291.47</td>
+      <td>299.92</td>
+      <td>279.77</td>
+      <td>2.542</td>
+      <td>28,375,900,000</td>
+      <td>299.12</td>
+      <td>1.7990</td>
+      <td>541,375,000</td>
+    </tr>
+    <tr>
+      <th>30-Sep-17</th>
+      <td>301.46</td>
+      <td>303.96</td>
+      <td>291.11</td>
+      <td>2.665</td>
+      <td>27,655,200,000</td>
+      <td>291.48</td>
+      <td>1.8310</td>
+      <td>332,439,000</td>
+    </tr>
+    <tr>
+      <th>1-Oct-17</th>
+      <td>302.34</td>
+      <td>303.19</td>
+      <td>295.06</td>
+      <td>2.776</td>
+      <td>28,615,200,000</td>
+      <td>301.55</td>
+      <td>1.8622</td>
+      <td>306,185,000</td>
+    </tr>
+    <tr>
+      <th>2-Oct-17</th>
+      <td>297.48</td>
+      <td>302.92</td>
+      <td>294.58</td>
+      <td>2.854</td>
+      <td>28,708,500,000</td>
+      <td>302.48</td>
+      <td>1.8896</td>
+      <td>339,443,000</td>
+    </tr>
+    <tr>
+      <th>3-Oct-17</th>
+      <td>292.46</td>
+      <td>300.11</td>
+      <td>288.13</td>
+      <td>2.937</td>
+      <td>28,238,500,000</td>
+      <td>297.48</td>
+      <td>1.9188</td>
+      <td>321,680,000</td>
     </tr>
   </tbody>
 </table>
+<p>5260 rows × 8 columns</p>
 </div>
 </div>
 
@@ -12598,29 +14538,67 @@ Name: Genres, dtype: bool</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Unforturnately, the different types of rock are associated with the same artists.</p>
+<h3 id="Visual-of-All--our-CC-prices">Visual of All  our CC prices<a class="anchor-link" href="#Visual-of-All--our-CC-prices">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Since Bitcoin's price is significantly higher, we gave the other 3 newer CCs a scalar of 10 in order to make cleaner plot.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">plotly</span>
+<span class="kn">import</span> <span class="nn">plotly.plotly</span> <span class="k">as</span> <span class="nn">py</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="k">as</span> <span class="nn">go</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;/Users/troy/Github/courses/DANTH/myTopTracks.json&#39;</span><span class="p">)</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">]</span>
-<span class="n">name</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">pop</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">ids</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;items&#39;</span><span class="p">]:</span>
-    <span class="n">name</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
-    <span class="n">pop</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s1">&#39;popularity&#39;</span><span class="p">])</span>
-    <span class="n">ids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">trace1</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">btc</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">],</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">btc</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">],</span>
+    <span class="n">mode</span> <span class="o">=</span> <span class="s1">&#39;Lines&#39;</span><span class="p">,</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Bitcoin Close Price&#39;</span>
+<span class="p">)</span>
+<span class="n">trace2</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">mon</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">],</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="n">mon</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">],</span>
+    <span class="n">mode</span> <span class="o">=</span> <span class="s1">&#39;Lines&#39;</span><span class="p">,</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Monero Close Price&#39;</span>
+<span class="p">)</span>
+<span class="n">trace3</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">lit</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">],</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="n">lit</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">],</span>
+    <span class="n">mode</span> <span class="o">=</span> <span class="s1">&#39;Lines&#39;</span><span class="p">,</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Litecoin Close Price&#39;</span>
+<span class="p">)</span>
+<span class="n">trace4</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">eth</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">],</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="n">eth</span><span class="p">[</span><span class="s1">&#39;Close&#39;</span><span class="p">],</span>
+    <span class="n">mode</span> <span class="o">=</span> <span class="s1">&#39;Lines&#39;</span><span class="p">,</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Ethereum Close Price&#39;</span>
+<span class="p">)</span>
 
-<span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Tracks&#39;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span><span class="s1">&#39;Popularities&#39;</span><span class="p">:</span> <span class="n">pop</span><span class="p">,</span> <span class="s1">&#39;ID&#39;</span><span class="p">:</span> <span class="n">ids</span><span class="p">}</span>
-<span class="n">tracks</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span>
-<span class="n">tracks</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">trace1</span><span class="p">,</span><span class="n">trace2</span><span class="p">,</span><span class="n">trace3</span><span class="p">,</span><span class="n">trace4</span><span class="p">]</span>
+
+<span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;basic-scatter&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12638,153 +14616,7 @@ Name: Genres, dtype: bool</pre>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>ID</th>
-      <th>Popularities</th>
-      <th>Tracks</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>28w7CPWQCqQxt0YCzDN75b</td>
-      <td>51</td>
-      <td>Quixoticelixer - Bonus Track</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1HOrB4LPlKBC9tyX0bPNjs</td>
-      <td>31</td>
-      <td>Harvester of Sorrow (Live in Mexico City)</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1XxCiPw07rd1ytYnE7SoJI</td>
-      <td>60</td>
-      <td>Road Trippin'</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0X7rrzflUKygU7ROPBvRKM</td>
-      <td>45</td>
-      <td>Coffee and Cigarettes</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1Ug98CRiQYu7wiSym4uLY4</td>
-      <td>61</td>
-      <td>Sad But True</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>1swp88wQzC976ubadoAqEZ</td>
-      <td>36</td>
-      <td>Hollywood Surf Club (feat. Mr. Talkbox)</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>0aGQHMr7bc23Y9Ts84ffop</td>
-      <td>64</td>
-      <td>Around The World</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>49rcSzMayJhIwGf0CJCaxJ</td>
-      <td>59</td>
-      <td>Wherever I May Roam</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>6hJzdYks1993CRwpSqePxs</td>
-      <td>29</td>
-      <td>The Reflection (feat. Sasha Rose, Dakini Star ...</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>1Se0r96r0gnqg67kJPmESc</td>
-      <td>61</td>
-      <td>Parallel Universe</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>2KNAEqEYvrplO3S3J2oVG5</td>
-      <td>29</td>
-      <td>Cheese</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>49colNVoLFcMszng9O8w4h</td>
-      <td>54</td>
-      <td>This Velvet Glove</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>5f2CgxUSiRtuEMcY6mmAW4</td>
-      <td>42</td>
-      <td>Kaleidoscope</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>1G391cbiT3v3Cywg8T7DM1</td>
-      <td>74</td>
-      <td>Scar Tissue</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>5BIMPccDwShpXq784RJlJp</td>
-      <td>72</td>
-      <td>Enter Sandman</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>3BW34zpQNgRUwuQ4eUyzMN</td>
-      <td>46</td>
-      <td>Fat Dance - Bonus Track</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>3M7K9ug8uPfZ5u6Qlgcs15</td>
-      <td>27</td>
-      <td>Brand New Angel</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>64BbK9SFKH2jk86U3dGj2P</td>
-      <td>77</td>
-      <td>Otherside</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>10igKaIKsSB6ZnWxPxPvKO</td>
-      <td>68</td>
-      <td>Nothing Else Matters</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>1jDOlilttG1vKtZLfwFRZD</td>
-      <td>54</td>
-      <td>Papa Was A Rollin' Stone</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~tkayne10/36.embed" height="525px" width="100%"></iframe>
 </div>
 
 </div>
@@ -12792,14 +14624,22 @@ Name: Genres, dtype: bool</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The goal here is to aggregate data by cryptocurrency. We can approach this by creating a multi-level index that will map a new numerical index for each cc. In order to start the index hierarchy, we need to find the total number of tuples associated with eact cc and then use that number to index the tuples.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">left</span> <span class="o">=</span> <span class="n">tracks</span><span class="p">[[</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span><span class="s1">&#39;Tracks&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">left</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">master</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;CC&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -12835,60 +14675,189 @@ Name: Genres, dtype: bool</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>ID</th>
-      <th>Tracks</th>
+      <th>Close</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>MA</th>
+      <th>Open</th>
+      <th>SMA</th>
+    </tr>
+    <tr>
+      <th>CC</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>28w7CPWQCqQxt0YCzDN75b</td>
-      <td>Quixoticelixer - Bonus Track</td>
+      <th>Bitcoin</th>
+      <td>718.804210</td>
+      <td>736.272765</td>
+      <td>696.893778</td>
+      <td>710.501118</td>
+      <td>716.325031</td>
+      <td>675.452342</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>1HOrB4LPlKBC9tyX0bPNjs</td>
-      <td>Harvester of Sorrow (Live in Mexico City)</td>
+      <th>Ethereum</th>
+      <td>58.631558</td>
+      <td>61.013183</td>
+      <td>55.490062</td>
+      <td>7.087932</td>
+      <td>58.278590</td>
+      <td>7.330305</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>1XxCiPw07rd1ytYnE7SoJI</td>
-      <td>Road Trippin'</td>
+      <th>Litecoin</th>
+      <td>9.330123</td>
+      <td>9.737444</td>
+      <td>8.843586</td>
+      <td>9.221423</td>
+      <td>9.302488</td>
+      <td>8.687041</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>0X7rrzflUKygU7ROPBvRKM</td>
-      <td>Coffee and Cigarettes</td>
+      <th>Monero</th>
+      <td>10.740487</td>
+      <td>11.325722</td>
+      <td>10.091139</td>
+      <td>10.463187</td>
+      <td>10.668743</td>
+      <td>9.025200</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">master</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;CC&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[18]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Close</th>
+      <th>Date</th>
+      <th>High</th>
+      <th>Iteration</th>
+      <th>Low</th>
+      <th>MA</th>
+      <th>Market Cap</th>
+      <th>Open</th>
+      <th>SMA</th>
+      <th>Volume</th>
     </tr>
     <tr>
-      <th>4</th>
-      <td>1Ug98CRiQYu7wiSym4uLY4</td>
-      <td>Sad But True</td>
+      <th>CC</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Bitcoin</th>
+      <td>68.430000</td>
+      <td>1-Apr-14</td>
+      <td>74.560000</td>
+      <td>0-1000</td>
+      <td>65.530000</td>
+      <td>78.948000</td>
+      <td>1,000,070,000</td>
+      <td>68.500000</td>
+      <td>95.241200</td>
+      <td>-</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>1swp88wQzC976ubadoAqEZ</td>
-      <td>Hollywood Surf Club (feat. Mr. Talkbox)</td>
+      <th>Ethereum</th>
+      <td>0.434829</td>
+      <td>1-Apr-16</td>
+      <td>0.482988</td>
+      <td>NaN</td>
+      <td>0.420897</td>
+      <td>1.334000</td>
+      <td>-</td>
+      <td>0.431589</td>
+      <td>1.465400</td>
+      <td>1,005,910</td>
     </tr>
     <tr>
-      <th>6</th>
-      <td>0aGQHMr7bc23Y9Ts84ffop</td>
-      <td>Around The World</td>
+      <th>Litecoin</th>
+      <td>1.160000</td>
+      <td>1-Apr-14</td>
+      <td>1.340000</td>
+      <td>NaN</td>
+      <td>1.110000</td>
+      <td>1.334000</td>
+      <td>1,039,720,000</td>
+      <td>1.150000</td>
+      <td>1.465400</td>
+      <td>-</td>
     </tr>
     <tr>
-      <th>7</th>
-      <td>49rcSzMayJhIwGf0CJCaxJ</td>
-      <td>Wherever I May Roam</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>6hJzdYks1993CRwpSqePxs</td>
-      <td>The Reflection (feat. Sasha Rose, Dakini Star ...</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>1Se0r96r0gnqg67kJPmESc</td>
-      <td>Parallel Universe</td>
+      <th>Monero</th>
+      <td>0.223522</td>
+      <td>1-Apr-15</td>
+      <td>0.251757</td>
+      <td>NaN</td>
+      <td>0.212967</td>
+      <td>0.251481</td>
+      <td>1,166,240,000</td>
+      <td>0.220121</td>
+      <td>0.293345</td>
+      <td>1,037,600</td>
     </tr>
   </tbody>
 </table>
@@ -12906,25 +14875,7 @@ Name: Genres, dtype: bool</pre>
 <div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;/Users/troy/Github/courses/DANTH/top10TrackFeatures.json&#39;</span><span class="p">)</span>
-<span class="n">data</span>
-
-
-<span class="n">da</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">val</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">loud</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">energies</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">ids</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">track</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;audio_features&#39;</span><span class="p">]:</span>
-    <span class="n">da</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track</span><span class="p">[</span><span class="s1">&#39;danceability&#39;</span><span class="p">])</span>
-    <span class="n">val</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track</span><span class="p">[</span><span class="s1">&#39;valence&#39;</span><span class="p">])</span>
-    <span class="n">loud</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track</span><span class="p">[</span><span class="s1">&#39;loudness&#39;</span><span class="p">])</span>
-    <span class="n">energies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track</span><span class="p">[</span><span class="s1">&#39;energy&#39;</span><span class="p">])</span>
-    <span class="n">ids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">track</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">])</span>
-
-<span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ID&#39;</span><span class="p">:</span> <span class="n">ids</span><span class="p">,</span><span class="s1">&#39;Dance Ability&#39;</span><span class="p">:</span> <span class="n">da</span><span class="p">,</span> <span class="s1">&#39;Valence&#39;</span><span class="p">:</span> <span class="n">val</span><span class="p">,</span> <span class="s1">&#39;Loudness&#39;</span><span class="p">:</span> <span class="n">loud</span><span class="p">,</span> <span class="s1">&#39;Energy&#39;</span><span class="p">:</span> <span class="n">energies</span><span class="p">}</span>
-<span class="n">right</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span>
-<span class="n">right</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">master</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;CC&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -12960,93 +14911,83 @@ Name: Genres, dtype: bool</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Dance Ability</th>
-      <th>Energy</th>
-      <th>ID</th>
-      <th>Loudness</th>
-      <th>Valence</th>
+      <th>Close</th>
+      <th>Date</th>
+      <th>High</th>
+      <th>Iteration</th>
+      <th>Low</th>
+      <th>MA</th>
+      <th>Market Cap</th>
+      <th>Open</th>
+      <th>SMA</th>
+      <th>Volume</th>
+    </tr>
+    <tr>
+      <th>CC</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>0.535</td>
-      <td>0.831</td>
-      <td>28w7CPWQCqQxt0YCzDN75b</td>
-      <td>-4.869</td>
-      <td>0.8340</td>
+      <th>Bitcoin</th>
+      <td>4892.01</td>
+      <td>9-Sep-17</td>
+      <td>4975.04</td>
+      <td>4000-5000</td>
+      <td>4678.53</td>
+      <td>4571.129</td>
+      <td>909,526,000</td>
+      <td>4901.42</td>
+      <td>4166.8244</td>
+      <td>994,625,000</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>0.305</td>
-      <td>0.976</td>
-      <td>1HOrB4LPlKBC9tyX0bPNjs</td>
-      <td>-6.593</td>
-      <td>0.0676</td>
+      <th>Ethereum</th>
+      <td>401.49</td>
+      <td>9-Sep-17</td>
+      <td>414.76</td>
+      <td>NaN</td>
+      <td>383.47</td>
+      <td>38.067</td>
+      <td>999,757,000</td>
+      <td>397.59</td>
+      <td>27.2898</td>
+      <td>986,266,000</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>0.243</td>
-      <td>0.470</td>
-      <td>1XxCiPw07rd1ytYnE7SoJI</td>
-      <td>-8.194</td>
-      <td>0.3930</td>
+      <th>Litecoin</th>
+      <td>86.04</td>
+      <td>9-Sep-17</td>
+      <td>92.07</td>
+      <td>NaN</td>
+      <td>75.59</td>
+      <td>74.185</td>
+      <td>99,946,000</td>
+      <td>85.83</td>
+      <td>56.7496</td>
+      <td>993,855</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>0.906</td>
-      <td>0.542</td>
-      <td>0X7rrzflUKygU7ROPBvRKM</td>
-      <td>-8.146</td>
-      <td>0.6530</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0.632</td>
-      <td>0.845</td>
-      <td>1Ug98CRiQYu7wiSym4uLY4</td>
-      <td>-6.336</td>
-      <td>0.4330</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>0.601</td>
-      <td>0.688</td>
-      <td>1swp88wQzC976ubadoAqEZ</td>
-      <td>-4.178</td>
-      <td>0.2350</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>0.504</td>
-      <td>0.960</td>
-      <td>0aGQHMr7bc23Y9Ts84ffop</td>
-      <td>-1.464</td>
-      <td>0.7740</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>0.554</td>
-      <td>0.816</td>
-      <td>49rcSzMayJhIwGf0CJCaxJ</td>
-      <td>-7.871</td>
-      <td>0.3620</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>0.936</td>
-      <td>0.237</td>
-      <td>6hJzdYks1993CRwpSqePxs</td>
-      <td>-11.230</td>
-      <td>0.6290</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>0.343</td>
-      <td>0.983</td>
-      <td>1Se0r96r0gnqg67kJPmESc</td>
-      <td>-2.359</td>
-      <td>0.1860</td>
+      <th>Monero</th>
+      <td>145.40</td>
+      <td>9-Sep-17</td>
+      <td>154.58</td>
+      <td>NaN</td>
+      <td>136.49</td>
+      <td>132.022</td>
+      <td>99,903,600</td>
+      <td>144.24</td>
+      <td>99.8556</td>
+      <td>99,815</td>
     </tr>
   </tbody>
 </table>
@@ -13064,8 +15005,8 @@ Name: Genres, dtype: bool</pre>
 <div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">main</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span><span class="n">right</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="n">left</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">])</span>
-<span class="n">main</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Count number of interations</span>
+<span class="n">master</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;CC&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -13101,115 +15042,83 @@ Name: Genres, dtype: bool</pre>
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>ID_x</th>
-      <th>Tracks</th>
-      <th>Dance Ability</th>
-      <th>Energy</th>
-      <th>ID_y</th>
-      <th>Loudness</th>
-      <th>Valence</th>
+      <th>Close</th>
+      <th>Date</th>
+      <th>High</th>
+      <th>Iteration</th>
+      <th>Low</th>
+      <th>MA</th>
+      <th>Market Cap</th>
+      <th>Open</th>
+      <th>SMA</th>
+      <th>Volume</th>
+    </tr>
+    <tr>
+      <th>CC</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>28w7CPWQCqQxt0YCzDN75b</td>
-      <td>Quixoticelixer - Bonus Track</td>
-      <td>0.535</td>
-      <td>0.831</td>
-      <td>28w7CPWQCqQxt0YCzDN75b</td>
-      <td>-4.869</td>
-      <td>0.8340</td>
+      <th>Bitcoin</th>
+      <td>1620</td>
+      <td>1620</td>
+      <td>1620</td>
+      <td>1620</td>
+      <td>1620</td>
+      <td>1611</td>
+      <td>1620</td>
+      <td>1620</td>
+      <td>1571</td>
+      <td>1620</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>1HOrB4LPlKBC9tyX0bPNjs</td>
-      <td>Harvester of Sorrow (Live in Mexico City)</td>
-      <td>0.305</td>
-      <td>0.976</td>
-      <td>1HOrB4LPlKBC9tyX0bPNjs</td>
-      <td>-6.593</td>
-      <td>0.0676</td>
+      <th>Ethereum</th>
+      <td>789</td>
+      <td>789</td>
+      <td>789</td>
+      <td>0</td>
+      <td>789</td>
+      <td>780</td>
+      <td>789</td>
+      <td>789</td>
+      <td>740</td>
+      <td>789</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>1XxCiPw07rd1ytYnE7SoJI</td>
-      <td>Road Trippin'</td>
-      <td>0.243</td>
-      <td>0.470</td>
-      <td>1XxCiPw07rd1ytYnE7SoJI</td>
-      <td>-8.194</td>
-      <td>0.3930</td>
+      <th>Litecoin</th>
+      <td>1620</td>
+      <td>1620</td>
+      <td>1620</td>
+      <td>0</td>
+      <td>1620</td>
+      <td>1611</td>
+      <td>1620</td>
+      <td>1620</td>
+      <td>1571</td>
+      <td>1620</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>0X7rrzflUKygU7ROPBvRKM</td>
-      <td>Coffee and Cigarettes</td>
-      <td>0.906</td>
-      <td>0.542</td>
-      <td>0X7rrzflUKygU7ROPBvRKM</td>
-      <td>-8.146</td>
-      <td>0.6530</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>1Ug98CRiQYu7wiSym4uLY4</td>
-      <td>Sad But True</td>
-      <td>0.632</td>
-      <td>0.845</td>
-      <td>1Ug98CRiQYu7wiSym4uLY4</td>
-      <td>-6.336</td>
-      <td>0.4330</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>1swp88wQzC976ubadoAqEZ</td>
-      <td>Hollywood Surf Club (feat. Mr. Talkbox)</td>
-      <td>0.601</td>
-      <td>0.688</td>
-      <td>1swp88wQzC976ubadoAqEZ</td>
-      <td>-4.178</td>
-      <td>0.2350</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>0aGQHMr7bc23Y9Ts84ffop</td>
-      <td>Around The World</td>
-      <td>0.504</td>
-      <td>0.960</td>
-      <td>0aGQHMr7bc23Y9Ts84ffop</td>
-      <td>-1.464</td>
-      <td>0.7740</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>49rcSzMayJhIwGf0CJCaxJ</td>
-      <td>Wherever I May Roam</td>
-      <td>0.554</td>
-      <td>0.816</td>
-      <td>49rcSzMayJhIwGf0CJCaxJ</td>
-      <td>-7.871</td>
-      <td>0.3620</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>6hJzdYks1993CRwpSqePxs</td>
-      <td>The Reflection (feat. Sasha Rose, Dakini Star ...</td>
-      <td>0.936</td>
-      <td>0.237</td>
-      <td>6hJzdYks1993CRwpSqePxs</td>
-      <td>-11.230</td>
-      <td>0.6290</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>1Se0r96r0gnqg67kJPmESc</td>
-      <td>Parallel Universe</td>
-      <td>0.343</td>
-      <td>0.983</td>
-      <td>1Se0r96r0gnqg67kJPmESc</td>
-      <td>-2.359</td>
-      <td>0.1860</td>
+      <th>Monero</th>
+      <td>1231</td>
+      <td>1231</td>
+      <td>1231</td>
+      <td>0</td>
+      <td>1231</td>
+      <td>1222</td>
+      <td>1231</td>
+      <td>1231</td>
+      <td>1182</td>
+      <td>1231</td>
     </tr>
   </tbody>
 </table>
@@ -13227,39 +15136,7 @@ Name: Genres, dtype: bool</pre>
 <div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.plotly</span> <span class="k">as</span> <span class="nn">py</span>
-<span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="k">as</span> <span class="nn">go</span>
-
-
-<span class="n">trace1</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="n">main</span><span class="p">[</span><span class="s1">&#39;Tracks&#39;</span><span class="p">],</span>
-    <span class="n">y</span><span class="o">=</span><span class="n">main</span><span class="p">[</span><span class="s1">&#39;Dance Ability&#39;</span><span class="p">],</span>
-    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Dance Ability&#39;</span>
-<span class="p">)</span>
-<span class="n">trace2</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="n">main</span><span class="p">[</span><span class="s1">&#39;Tracks&#39;</span><span class="p">],</span>
-    <span class="n">y</span><span class="o">=</span><span class="n">main</span><span class="p">[</span><span class="s1">&#39;Energy&#39;</span><span class="p">],</span>
-    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Energy&#39;</span>
-<span class="p">)</span>
-<span class="n">trace3</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="n">main</span><span class="p">[</span><span class="s1">&#39;Tracks&#39;</span><span class="p">],</span>
-    <span class="n">y</span><span class="o">=</span><span class="n">main</span><span class="p">[</span><span class="s1">&#39;Valence&#39;</span><span class="p">],</span>
-    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Valence&#39;</span>
-<span class="p">)</span>
-<span class="n">trace4</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="n">main</span><span class="p">[</span><span class="s1">&#39;Tracks&#39;</span><span class="p">],</span>
-    <span class="n">y</span><span class="o">=</span><span class="n">main</span><span class="p">[</span><span class="s1">&#39;Loudness&#39;</span><span class="p">],</span>
-    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Loudness&#39;</span>
-<span class="p">)</span>
-
-<span class="c1"># plot_data = [trace1, trace2, trace3, trace4]</span>
-<span class="n">plot_data</span> <span class="o">=</span> <span class="p">[</span><span class="n">trace1</span><span class="p">,</span> <span class="n">trace2</span><span class="p">,</span> <span class="n">trace3</span><span class="p">]</span>
-<span class="n">layout</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
-    <span class="n">barmode</span><span class="o">=</span><span class="s1">&#39;group&#39;</span>
-<span class="p">)</span>
-
-<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">plot_data</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
-<span class="n">py</span><span class="o">.</span><span class="n">iplot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;grouped-bar&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">master</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;CC&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -13277,7 +15154,184 @@ Name: Genres, dtype: bool</pre>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~tkayne10/48.embed" height="525px" width="100%"></iframe>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="8" halign="left">Close</th>
+      <th colspan="2" halign="left">High</th>
+      <th>...</th>
+      <th colspan="2" halign="left">Open</th>
+      <th colspan="8" halign="left">SMA</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+      <th>count</th>
+      <th>mean</th>
+      <th>...</th>
+      <th>75%</th>
+      <th>max</th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+    <tr>
+      <th>CC</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Bitcoin</th>
+      <td>1620.0</td>
+      <td>718.804210</td>
+      <td>846.165337</td>
+      <td>68.430000</td>
+      <td>261.412500</td>
+      <td>448.19</td>
+      <td>705.2800</td>
+      <td>4892.01</td>
+      <td>1620.0</td>
+      <td>736.272765</td>
+      <td>...</td>
+      <td>705.3475</td>
+      <td>4901.42</td>
+      <td>1571.0</td>
+      <td>675.452342</td>
+      <td>725.604766</td>
+      <td>95.241200</td>
+      <td>262.541000</td>
+      <td>457.11340</td>
+      <td>687.3790</td>
+      <td>4166.8244</td>
+    </tr>
+    <tr>
+      <th>Ethereum</th>
+      <td>789.0</td>
+      <td>58.631558</td>
+      <td>103.192076</td>
+      <td>0.434829</td>
+      <td>5.550000</td>
+      <td>11.23</td>
+      <td>43.2400</td>
+      <td>401.49</td>
+      <td>789.0</td>
+      <td>61.013183</td>
+      <td>...</td>
+      <td>42.8700</td>
+      <td>397.59</td>
+      <td>740.0</td>
+      <td>7.330305</td>
+      <td>6.831907</td>
+      <td>1.465400</td>
+      <td>2.471950</td>
+      <td>3.75790</td>
+      <td>10.8906</td>
+      <td>27.2898</td>
+    </tr>
+    <tr>
+      <th>Litecoin</th>
+      <td>1620.0</td>
+      <td>9.330123</td>
+      <td>13.145707</td>
+      <td>1.160000</td>
+      <td>3.060000</td>
+      <td>3.84</td>
+      <td>8.7125</td>
+      <td>86.04</td>
+      <td>1620.0</td>
+      <td>9.737444</td>
+      <td>...</td>
+      <td>8.6750</td>
+      <td>85.83</td>
+      <td>1571.0</td>
+      <td>8.687041</td>
+      <td>11.349873</td>
+      <td>1.465400</td>
+      <td>3.195900</td>
+      <td>3.87360</td>
+      <td>8.8001</td>
+      <td>56.7496</td>
+    </tr>
+    <tr>
+      <th>Monero</th>
+      <td>1231.0</td>
+      <td>10.740487</td>
+      <td>22.491004</td>
+      <td>0.223522</td>
+      <td>0.513035</td>
+      <td>1.39</td>
+      <td>9.4300</td>
+      <td>145.40</td>
+      <td>1231.0</td>
+      <td>11.325722</td>
+      <td>...</td>
+      <td>9.3800</td>
+      <td>144.24</td>
+      <td>1182.0</td>
+      <td>9.025200</td>
+      <td>17.415058</td>
+      <td>0.293345</td>
+      <td>0.522607</td>
+      <td>1.22189</td>
+      <td>8.6267</td>
+      <td>99.8556</td>
+    </tr>
+  </tbody>
+</table>
+<p>4 rows × 48 columns</p>
+</div>
 </div>
 
 </div>
@@ -13285,14 +15339,583 @@ Name: Genres, dtype: bool</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">master</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;CC&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[22]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>CC</th>
+      <th>Bitcoin</th>
+      <th>Ethereum</th>
+      <th>Litecoin</th>
+      <th>Monero</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="8" valign="top">Close</th>
+      <th>count</th>
+      <td>1620.000000</td>
+      <td>789.000000</td>
+      <td>1620.000000</td>
+      <td>1231.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>718.804210</td>
+      <td>58.631558</td>
+      <td>9.330123</td>
+      <td>10.740487</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>846.165337</td>
+      <td>103.192076</td>
+      <td>13.145707</td>
+      <td>22.491004</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>68.430000</td>
+      <td>0.434829</td>
+      <td>1.160000</td>
+      <td>0.223522</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>261.412500</td>
+      <td>5.550000</td>
+      <td>3.060000</td>
+      <td>0.513035</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>448.190000</td>
+      <td>11.230000</td>
+      <td>3.840000</td>
+      <td>1.390000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>705.280000</td>
+      <td>43.240000</td>
+      <td>8.712500</td>
+      <td>9.430000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>4892.010000</td>
+      <td>401.490000</td>
+      <td>86.040000</td>
+      <td>145.400000</td>
+    </tr>
+    <tr>
+      <th rowspan="8" valign="top">High</th>
+      <th>count</th>
+      <td>1620.000000</td>
+      <td>789.000000</td>
+      <td>1620.000000</td>
+      <td>1231.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>736.272765</td>
+      <td>61.013183</td>
+      <td>9.737444</td>
+      <td>11.325722</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>870.749477</td>
+      <td>107.243068</td>
+      <td>13.847245</td>
+      <td>23.724047</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>74.560000</td>
+      <td>0.482988</td>
+      <td>1.340000</td>
+      <td>0.251757</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>266.462500</td>
+      <td>5.890000</td>
+      <td>3.120000</td>
+      <td>0.542731</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>454.645000</td>
+      <td>11.520000</td>
+      <td>3.910000</td>
+      <td>1.500000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>724.555000</td>
+      <td>44.260000</td>
+      <td>9.262500</td>
+      <td>9.810000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>4975.040000</td>
+      <td>414.760000</td>
+      <td>92.070000</td>
+      <td>154.580000</td>
+    </tr>
+    <tr>
+      <th rowspan="8" valign="top">Low</th>
+      <th>count</th>
+      <td>1620.000000</td>
+      <td>789.000000</td>
+      <td>1620.000000</td>
+      <td>1231.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>696.893778</td>
+      <td>55.490062</td>
+      <td>8.843586</td>
+      <td>10.091139</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>812.844163</td>
+      <td>97.917796</td>
+      <td>12.272203</td>
+      <td>21.023287</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>65.530000</td>
+      <td>0.420897</td>
+      <td>1.110000</td>
+      <td>0.212967</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>255.740000</td>
+      <td>4.640000</td>
+      <td>2.990000</td>
+      <td>0.494739</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>442.785000</td>
+      <td>10.880000</td>
+      <td>3.790000</td>
+      <td>1.240000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>688.002500</td>
+      <td>39.690000</td>
+      <td>8.435000</td>
+      <td>8.980000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>4678.530000</td>
+      <td>383.470000</td>
+      <td>75.590000</td>
+      <td>136.490000</td>
+    </tr>
+    <tr>
+      <th rowspan="8" valign="top">MA</th>
+      <th>count</th>
+      <td>1611.000000</td>
+      <td>780.000000</td>
+      <td>1611.000000</td>
+      <td>1222.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>710.501118</td>
+      <td>7.087932</td>
+      <td>9.221423</td>
+      <td>10.463187</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>824.006709</td>
+      <td>7.333241</td>
+      <td>12.835936</td>
+      <td>21.794368</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>78.948000</td>
+      <td>1.334000</td>
+      <td>1.334000</td>
+      <td>0.251481</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>259.389000</td>
+      <td>2.303000</td>
+      <td>3.094000</td>
+      <td>0.513099</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>449.541000</td>
+      <td>3.593500</td>
+      <td>3.850000</td>
+      <td>1.363000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>709.338000</td>
+      <td>10.444500</td>
+      <td>8.544500</td>
+      <td>9.608250</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>4571.129000</td>
+      <td>38.067000</td>
+      <td>74.185000</td>
+      <td>132.022000</td>
+    </tr>
+    <tr>
+      <th rowspan="8" valign="top">Open</th>
+      <th>count</th>
+      <td>1620.000000</td>
+      <td>789.000000</td>
+      <td>1620.000000</td>
+      <td>1231.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>716.325031</td>
+      <td>58.278590</td>
+      <td>9.302488</td>
+      <td>10.668743</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>841.566485</td>
+      <td>102.877114</td>
+      <td>13.103364</td>
+      <td>22.366494</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>68.500000</td>
+      <td>0.431589</td>
+      <td>1.150000</td>
+      <td>0.220121</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>261.080000</td>
+      <td>5.400000</td>
+      <td>3.070000</td>
+      <td>0.514239</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>448.150000</td>
+      <td>11.220000</td>
+      <td>3.845000</td>
+      <td>1.380000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>705.347500</td>
+      <td>42.870000</td>
+      <td>8.675000</td>
+      <td>9.380000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>4901.420000</td>
+      <td>397.590000</td>
+      <td>85.830000</td>
+      <td>144.240000</td>
+    </tr>
+    <tr>
+      <th rowspan="8" valign="top">SMA</th>
+      <th>count</th>
+      <td>1571.000000</td>
+      <td>740.000000</td>
+      <td>1571.000000</td>
+      <td>1182.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>675.452342</td>
+      <td>7.330305</td>
+      <td>8.687041</td>
+      <td>9.025200</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>725.604766</td>
+      <td>6.831907</td>
+      <td>11.349873</td>
+      <td>17.415058</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>95.241200</td>
+      <td>1.465400</td>
+      <td>1.465400</td>
+      <td>0.293345</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>262.541000</td>
+      <td>2.471950</td>
+      <td>3.195900</td>
+      <td>0.522607</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>457.113400</td>
+      <td>3.757900</td>
+      <td>3.873600</td>
+      <td>1.221890</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>687.379000</td>
+      <td>10.890600</td>
+      <td>8.800100</td>
+      <td>8.626700</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>4166.824400</td>
+      <td>27.289800</td>
+      <td>56.749600</td>
+      <td>99.855600</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">master</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;CC&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">transpose</span><span class="p">()[</span><span class="s1">&#39;Bitcoin&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[25]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Close  count    1620.000000
+       mean      718.804210
+       std       846.165337
+       min        68.430000
+       25%       261.412500
+       50%       448.190000
+       75%       705.280000
+       max      4892.010000
+High   count    1620.000000
+       mean      736.272765
+       std       870.749477
+       min        74.560000
+       25%       266.462500
+       50%       454.645000
+       75%       724.555000
+       max      4975.040000
+Low    count    1620.000000
+       mean      696.893778
+       std       812.844163
+       min        65.530000
+       25%       255.740000
+       50%       442.785000
+       75%       688.002500
+       max      4678.530000
+MA     count    1611.000000
+       mean      710.501118
+       std       824.006709
+       min        78.948000
+       25%       259.389000
+       50%       449.541000
+       75%       709.338000
+       max      4571.129000
+Open   count    1620.000000
+       mean      716.325031
+       std       841.566485
+       min        68.500000
+       25%       261.080000
+       50%       448.150000
+       75%       705.347500
+       max      4901.420000
+SMA    count    1571.000000
+       mean      675.452342
+       std       725.604766
+       min        95.241200
+       25%       262.541000
+       50%       457.113400
+       75%       687.379000
+       max      4166.824400
+Name: Bitcoin, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Merging">Merging<a class="anchor-link" href="#Merging">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Merging works like SQL Join logic. We combine multiple dataframes with an index key to form a relational table.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># define left and right data fr</span>
+<span class="c1"># master_df.merge(left, right, on=[&#39;Key1&#39;,&#39;Key2])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># left = btc_df[&#39;Daily Range&#39;] &lt; btc_df[&#39;&#39;]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Output-to-csv">Output to csv<a class="anchor-link" href="#Output-to-csv">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">master</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;data.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I have found that these four cryptocurrencies are very correlated with each other. They rise and fall around the same time. Uptrends and Downtrends are common among one another. Howerver, the stocks are very volatile. It is difficult to predict trends. In addtion, I have found that many current events are correlated with specific inclines and declines. Initial Coin Offerings (ICO) have a strong correlation with the data.  ICOs publicly announce their launches. If you are interested to invest, make sure you also watch out for ICO launches.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>ICO Schedules: <a href="https://tokenmarket.net/ico-calendar/upcoming">https://tokenmarket.net/ico-calendar/upcoming</a></p>
+
+</div>
+</div>
 </div>
     </div>
   </div>
-
-
-
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
 </body>
 
 
